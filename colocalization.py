@@ -6,18 +6,18 @@
 import csv, sys, re
 
 with open ('casII_defense_systems.tsv', 'r') as casII, open ('casIIIA_only_staph_defense_systems.tsv', 'r') as casIII, open('colocalizationlist.txt', 'w') as outfile:
-    # read_casII=csv.DictReader(casII, delimiter= '\t')
-    # read_casIII=csv.DictReader(casIII, delimiter = '\t')
-    accession= r'(\w*\.\d)(.*)'
+    casII=csv.reader(casII, delimiter= '\t')
+    print(str(casII))
+    casIII=csv.reader(casIII, delimiter = '\t')
+    print(casIII)
+    accession= r"(\w*\.\d)(.*)"
     found=[]
-    for line in casII:
-        for line2 in casIII:
-            typeII=re.search(accession, line)
-            print(typeII)
-            typeIII=re.search(accession, line2)
-            print(typeIII)
-            if typeII == typeIII:
-                found+= typeII.group(0)
+    for system in casII:
+        geneid=re.search(accession, system)
+        for system2 in casIII:
+            geneid2=re.search(accession, system)
+    if geneid == geneid2:
+        found+=geneid2
 
     for gene in found:
         outfile.write(f'{found}+\n')
