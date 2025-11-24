@@ -12,20 +12,22 @@ with open ('casII_defense_systems.tsv', 'r') as casII, open ('casIIIA_only_staph
     headings2=next(casIII)
     casII = csv.reader(casII, delimiter='\t')
     casIII = csv.reader(casIII, delimiter='\t')
+
+    # Extract prefixes from casII
+    casII_prefixes = set()
     for system in casII:
-        gene_id=re.search(accession, system[0]).group(1)
-        if gene_id== 'GCA_019998745.2':
-            print('found it')
-        for system2 in casIII:
-            gene_id2=re.search(accession, system2[0]).group(1)
-            if gene_id2=='GCA_019998745.2':
-                print('found it here too')
+        match = re.search(accession, system[0])
+        if match:
+            casII_prefixes.add(match.group(1))
 
-        if str(gene_id) == str(gene_id2):
-            found.append(gene_id2)
-            print('compared the two')
+    # Extract prefixes from casIII and find matches
+    found = []
+    for system2 in casIII:
+        match = re.search(accession, system2[0])
+        if match:
+            gene_id2 = match.group(1)
+            if gene_id2 in casII_prefixes:
+                found.append(gene_id2)
+                print(f'Found matching prefix: {gene_id2}')
 
-    for gene in found:
-        outfile.write(f'{found}+\n')
-
-#for some reason, it's searching for the system in both files, but it's not comparing the two
+    outfile.write(f'{found} \n')
