@@ -1,0 +1,1349 @@
+Last login: Mon Nov 24 14:33:55 on console
+(base) vivian@vivians-imac-2 ~ % ssh -l yli03 login05-hpc.rockefeller.edu
+The authenticity of host 'login05-hpc.rockefeller.edu (129.85.1.254)' can't be established.
+ED25519 key fingerprint is SHA256:tvAb3nyDNAhs1cMCymx9jfHxfMpYncNl66Ooi93A43M.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'login05-hpc.rockefeller.edu' (ED25519) to the list of known hosts.
+yli03@login05-hpc.rockefeller.edu's password: 
+Permission denied, please try again.
+yli03@login05-hpc.rockefeller.edu's password: 
+Last login: Wed Dec  3 00:37:49 2025 from 129.85.91.37
+[yli03@login05 ~]$ ls
+miniconda3  Miniconda3-latest-Linux-x86_64.sh  miniconda.sh  perl5  sample_job.sh  scratch  slurm-2625166.out
+[yli03@login05 ~]$ cd scratc h
+-bash: cd: too many arguments
+[yli03@login05 ~]$ cd scratch
+[yli03@login05 scratch]$ ls
+miniconda3
+[yli03@login05 scratch]$ pip install boltzgen
+-bash: pip: command not found
+[yli03@login05 scratch]$ conda install boltzgen
+Retrieving notices: done
+Channels:
+ - nodefaults
+ - conda-forge
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: failed
+
+PackagesNotFoundError: The following packages are not available from current channels:
+
+  - boltzgen
+
+Current channels:
+
+  - https://conda.anaconda.org/nodefaults
+  - https://conda.anaconda.org/conda-forge
+
+To search for alternate channels that may provide the conda package you're
+looking for, navigate to
+
+    https://anaconda.org
+
+and use the search bar at the top of the page.
+
+
+[yli03@login05 scratch]$ pip install boltzgen
+-bash: pip: command not found
+[yli03@login05 scratch]$ conda activate boltzgen
+(boltzgen) [yli03@login05 scratch]$  pyenv install 3.11
+-bash: pyenv: command not found
+(boltzgen) [yli03@login05 scratch]$ python3 pyenv install --version 3.11
+python3: can't open file '/lustre/fs4/marr_lab/scratch/yli03/pyenv': [Errno 2] No such file or directory
+(boltzgen) [yli03@login05 scratch]$ python3.11 --version
+Python 3.11.14
+(boltzgen) [yli03@login05 scratch]$ pip install boltzgen
+Requirement already satisfied: boltzgen in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (0.1.6)
+Requirement already satisfied: numpy==2.0.2 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from boltzgen) (2.0.2)
+Requirement already satisfied: numba==0.61.0 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from boltzgen) (0.61.0)
+Requirement already satisfied: matplotlib in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from boltzgen) (3.10.7)
+Requirement already satisfied: hydride in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from boltzgen) (1.2.3)
+Requirement already satisfied: biotite in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from boltzgen) (1.5.0)
+Requirement already satisfied: pydssp in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from boltzgen) (0.9.1)
+Requirement already satisfied: logomaker in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from boltzgen) (0.8.7)
+Requirement already satisfied: gemmi==0.6.5 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from boltzgen) (0.6.5)
+Requirement already satisfied: torch>=2.4.1 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from boltzgen) (2.9.1)
+Requirement already satisfied: scikit-learn in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from boltzgen) (1.7.2)
+Requirement already satisfied: hydra-core in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from boltzgen) (1.3.2)
+Requirement already satisfied: edit_distance in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from boltzgen) (1.0.7)
+Requirement already satisfied: pytorch-lightning in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from boltzgen) (2.6.0)
+Requirement already satisfied: rdkit in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from boltzgen) (2025.9.2)
+Requirement already satisfied: pandas in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from boltzgen) (2.3.3)
+Requirement already satisfied: pdbeccdutils in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from boltzgen) (0.8.5)
+Requirement already satisfied: einx in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from boltzgen) (0.3.0)
+Requirement already satisfied: einops in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from boltzgen) (0.8.1)
+Requirement already satisfied: mashumaro in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from boltzgen) (3.17)
+Requirement already satisfied: nvidia-ml-py>=12.535.133 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from boltzgen) (13.580.82)
+Requirement already satisfied: cuequivariance_ops_cu12>=0.5.0 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from boltzgen) (0.7.0)
+Requirement already satisfied: cuequivariance_ops_torch_cu12>=0.5.0 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from boltzgen) (0.7.0)
+Requirement already satisfied: cuequivariance_torch>=0.5.0 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from boltzgen) (0.7.0)
+Requirement already satisfied: huggingface_hub in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from boltzgen) (1.1.7)
+Requirement already satisfied: biopython in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from boltzgen) (1.86)
+Requirement already satisfied: llvmlite<0.45,>=0.44.0dev0 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from numba==0.61.0->boltzgen) (0.44.0)
+Requirement already satisfied: nvidia-cublas-cu12>=12.5.0 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from cuequivariance_ops_cu12>=0.5.0->boltzgen) (12.8.4.1)
+Requirement already satisfied: tqdm in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from cuequivariance_ops_cu12>=0.5.0->boltzgen) (4.67.1)
+Requirement already satisfied: platformdirs in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from cuequivariance_ops_cu12>=0.5.0->boltzgen) (4.5.0)
+Requirement already satisfied: scipy in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from cuequivariance_ops_torch_cu12>=0.5.0->boltzgen) (1.16.3)
+Requirement already satisfied: cuequivariance in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from cuequivariance_torch>=0.5.0->boltzgen) (0.7.0)
+Requirement already satisfied: filelock in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from torch>=2.4.1->boltzgen) (3.20.0)
+Requirement already satisfied: typing-extensions>=4.10.0 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from torch>=2.4.1->boltzgen) (4.15.0)
+Requirement already satisfied: sympy>=1.13.3 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from torch>=2.4.1->boltzgen) (1.14.0)
+Requirement already satisfied: networkx>=2.5.1 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from torch>=2.4.1->boltzgen) (3.6)
+Requirement already satisfied: jinja2 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from torch>=2.4.1->boltzgen) (3.1.6)
+Requirement already satisfied: fsspec>=0.8.5 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from torch>=2.4.1->boltzgen) (2025.10.0)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.8.93 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from torch>=2.4.1->boltzgen) (12.8.93)
+Requirement already satisfied: nvidia-cuda-runtime-cu12==12.8.90 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from torch>=2.4.1->boltzgen) (12.8.90)
+Requirement already satisfied: nvidia-cuda-cupti-cu12==12.8.90 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from torch>=2.4.1->boltzgen) (12.8.90)
+Requirement already satisfied: nvidia-cudnn-cu12==9.10.2.21 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from torch>=2.4.1->boltzgen) (9.10.2.21)
+Requirement already satisfied: nvidia-cufft-cu12==11.3.3.83 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from torch>=2.4.1->boltzgen) (11.3.3.83)
+Requirement already satisfied: nvidia-curand-cu12==10.3.9.90 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from torch>=2.4.1->boltzgen) (10.3.9.90)
+Requirement already satisfied: nvidia-cusolver-cu12==11.7.3.90 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from torch>=2.4.1->boltzgen) (11.7.3.90)
+Requirement already satisfied: nvidia-cusparse-cu12==12.5.8.93 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from torch>=2.4.1->boltzgen) (12.5.8.93)
+Requirement already satisfied: nvidia-cusparselt-cu12==0.7.1 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from torch>=2.4.1->boltzgen) (0.7.1)
+Requirement already satisfied: nvidia-nccl-cu12==2.27.5 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from torch>=2.4.1->boltzgen) (2.27.5)
+Requirement already satisfied: nvidia-nvshmem-cu12==3.3.20 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from torch>=2.4.1->boltzgen) (3.3.20)
+Requirement already satisfied: nvidia-nvtx-cu12==12.8.90 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from torch>=2.4.1->boltzgen) (12.8.90)
+Requirement already satisfied: nvidia-nvjitlink-cu12==12.8.93 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from torch>=2.4.1->boltzgen) (12.8.93)
+Requirement already satisfied: nvidia-cufile-cu12==1.13.1.3 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from torch>=2.4.1->boltzgen) (1.13.1.3)
+Requirement already satisfied: triton==3.5.1 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from torch>=2.4.1->boltzgen) (3.5.1)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from sympy>=1.13.3->torch>=2.4.1->boltzgen) (1.3.0)
+Requirement already satisfied: biotraj<2.0,>=1.0 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from biotite->boltzgen) (1.2.2)
+Requirement already satisfied: msgpack>=0.5.6 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from biotite->boltzgen) (1.1.2)
+Requirement already satisfied: packaging>=24.0 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from biotite->boltzgen) (25.0)
+Requirement already satisfied: requests>=2.12 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from biotite->boltzgen) (2.32.5)
+Requirement already satisfied: charset_normalizer<4,>=2 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from requests>=2.12->biotite->boltzgen) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from requests>=2.12->biotite->boltzgen) (3.11)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from requests>=2.12->biotite->boltzgen) (2.5.0)
+Requirement already satisfied: certifi>=2017.4.17 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from requests>=2.12->biotite->boltzgen) (2025.11.12)
+Requirement already satisfied: opt-einsum in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from cuequivariance->cuequivariance_torch>=0.5.0->boltzgen) (3.4.0)
+Requirement already satisfied: frozendict in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from einx->boltzgen) (2.4.7)
+Requirement already satisfied: hf-xet<2.0.0,>=1.2.0 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from huggingface_hub->boltzgen) (1.2.0)
+Requirement already satisfied: httpx<1,>=0.23.0 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from huggingface_hub->boltzgen) (0.28.1)
+Requirement already satisfied: pyyaml>=5.1 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from huggingface_hub->boltzgen) (6.0.3)
+Requirement already satisfied: shellingham in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from huggingface_hub->boltzgen) (1.5.4)
+Requirement already satisfied: typer-slim in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from huggingface_hub->boltzgen) (0.20.0)
+Requirement already satisfied: anyio in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from httpx<1,>=0.23.0->huggingface_hub->boltzgen) (4.12.0)
+Requirement already satisfied: httpcore==1.* in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from httpx<1,>=0.23.0->huggingface_hub->boltzgen) (1.0.9)
+Requirement already satisfied: h11>=0.16 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from httpcore==1.*->httpx<1,>=0.23.0->huggingface_hub->boltzgen) (0.16.0)
+Requirement already satisfied: omegaconf<2.4,>=2.2 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from hydra-core->boltzgen) (2.3.0)
+Requirement already satisfied: antlr4-python3-runtime==4.9.* in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from hydra-core->boltzgen) (4.9.3)
+Requirement already satisfied: MarkupSafe>=2.0 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from jinja2->torch>=2.4.1->boltzgen) (3.0.3)
+Requirement already satisfied: contourpy>=1.0.1 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from matplotlib->boltzgen) (1.3.3)
+Requirement already satisfied: cycler>=0.10 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from matplotlib->boltzgen) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from matplotlib->boltzgen) (4.61.0)
+Requirement already satisfied: kiwisolver>=1.3.1 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from matplotlib->boltzgen) (1.4.9)
+Requirement already satisfied: pillow>=8 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from matplotlib->boltzgen) (12.0.0)
+Requirement already satisfied: pyparsing>=3 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from matplotlib->boltzgen) (3.2.5)
+Requirement already satisfied: python-dateutil>=2.7 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from matplotlib->boltzgen) (2.9.0.post0)
+Requirement already satisfied: six>=1.5 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from python-dateutil>=2.7->matplotlib->boltzgen) (1.17.0)
+Requirement already satisfied: pytz>=2020.1 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from pandas->boltzgen) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from pandas->boltzgen) (2025.2)
+Requirement already satisfied: torchmetrics>0.7.0 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from pytorch-lightning->boltzgen) (1.8.2)
+Requirement already satisfied: lightning-utilities>=0.10.0 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from pytorch-lightning->boltzgen) (0.15.2)
+Requirement already satisfied: aiohttp!=4.0.0a0,!=4.0.0a1 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from fsspec[http]>=2022.5.0->pytorch-lightning->boltzgen) (3.13.2)
+Requirement already satisfied: aiohappyeyeballs>=2.5.0 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]>=2022.5.0->pytorch-lightning->boltzgen) (2.6.1)
+Requirement already satisfied: aiosignal>=1.4.0 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]>=2022.5.0->pytorch-lightning->boltzgen) (1.4.0)
+Requirement already satisfied: attrs>=17.3.0 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]>=2022.5.0->pytorch-lightning->boltzgen) (25.4.0)
+Requirement already satisfied: frozenlist>=1.1.1 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]>=2022.5.0->pytorch-lightning->boltzgen) (1.8.0)
+Requirement already satisfied: multidict<7.0,>=4.5 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]>=2022.5.0->pytorch-lightning->boltzgen) (6.7.0)
+Requirement already satisfied: propcache>=0.2.0 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]>=2022.5.0->pytorch-lightning->boltzgen) (0.4.1)
+Requirement already satisfied: yarl<2.0,>=1.17.0 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]>=2022.5.0->pytorch-lightning->boltzgen) (1.22.0)
+Requirement already satisfied: setuptools in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from lightning-utilities>=0.10.0->pytorch-lightning->boltzgen) (80.9.0)
+Requirement already satisfied: joblib>=1.2.0 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from scikit-learn->boltzgen) (1.5.2)
+Requirement already satisfied: threadpoolctl>=3.1.0 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from scikit-learn->boltzgen) (3.6.0)
+Requirement already satisfied: click>=8.0.0 in /lustre/fs4/home/yli03/miniconda3/envs/boltzgen/lib/python3.11/site-packages (from typer-slim->huggingface_hub->boltzgen) (8.3.1)
+(boltzgen) [yli03@login05 scratch]$ vif
+-bash: vif: command not found
+(boltzgen) [yli03@login05 scratch]$ vi
+(boltzgen) [yli03@login05 scratch]$ vi 'cam1.cif'
+(boltzgen) [yli03@login05 scratch]$ ls
+cam1.cif  miniconda3
+(boltzgen) [yli03@login05 scratch]$ vi 'cam1.yaml'
+(boltzgen) [yli03@login05 scratch]$ ls
+cam1.cif  cam1.yaml  miniconda3
+(boltzgen) [yli03@login05 scratch]$ boltzgen check cam1.yaml
+mols.zip: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 391M/391M [00:03<00:00, 121MB/s]
+Using dataset artifact: /ru-auth/local/home/yli03/.cache/huggingface/hub/datasets--boltzgen--inference-data/snapshots/c3d36fd276e9caf098c75d4113c6d5eb320b1a4c/mols.zip
+************** Checking design spec: cam1.yaml **************
+Total designed residues: 144
+Design specification visualization is written to cam1.cif
+*************************************************************
+(boltzgen) [yli03@login05 scratch]$ ls
+cam1.cif  cam1.yaml  miniconda3
+(boltzgen) [yli03@login05 scratch]$ open cam1.cif
+-bash: open: command not found
+(boltzgen) [yli03@login05 scratch]$ cd cam1.cif
+-bash: cd: cam1.cif: Not a directory
+(boltzgen) [yli03@login05 scratch]$ cat cam1.cif
+data_model
+_entry.id model
+
+_cell.entry_id model
+_cell.length_a 1
+_cell.length_b 1
+_cell.length_c 1
+_cell.angle_alpha 90
+_cell.angle_beta 90
+_cell.angle_gamma 90
+
+_symmetry.entry_id model
+_symmetry.space_group_name_H-M ''
+
+loop_
+_entity.id
+_entity.type
+1 polymer
+2 non-polymer
+
+loop_
+_entity_poly.entity_id
+_entity_poly.type
+_entity_poly.pdbx_strand_id
+_entity_poly.pdbx_seq_one_letter_code
+1 polypeptide(L) ? GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
+
+
+
+loop_
+_struct_asym.id
+_struct_asym.entity_id
+A 1
+B 2
+
+
+
+
+loop_
+_atom_type.symbol
+C
+N
+O
+
+loop_
+_entity_poly_seq.entity_id
+_entity_poly_seq.num
+_entity_poly_seq.mon_id
+1 1 GLY
+1 2 GLY
+1 3 GLY
+1 4 GLY
+1 5 GLY
+1 6 GLY
+1 7 GLY
+1 8 GLY
+1 9 GLY
+1 10 GLY
+1 11 GLY
+1 12 GLY
+1 13 GLY
+1 14 GLY
+1 15 GLY
+1 16 GLY
+1 17 GLY
+1 18 GLY
+1 19 GLY
+1 20 GLY
+1 21 GLY
+1 22 GLY
+1 23 GLY
+1 24 GLY
+1 25 GLY
+1 26 GLY
+1 27 GLY
+1 28 GLY
+1 29 GLY
+1 30 GLY
+1 31 GLY
+1 32 GLY
+1 33 GLY
+1 34 GLY
+1 35 GLY
+1 36 GLY
+1 37 GLY
+1 38 GLY
+1 39 GLY
+1 40 GLY
+1 41 GLY
+1 42 GLY
+1 43 GLY
+1 44 GLY
+1 45 GLY
+1 46 GLY
+1 47 GLY
+1 48 GLY
+1 49 GLY
+1 50 GLY
+1 51 GLY
+1 52 GLY
+1 53 GLY
+1 54 GLY
+1 55 GLY
+1 56 GLY
+1 57 GLY
+1 58 GLY
+1 59 GLY
+1 60 GLY
+1 61 GLY
+1 62 GLY
+1 63 GLY
+1 64 GLY
+1 65 GLY
+1 66 GLY
+1 67 GLY
+1 68 GLY
+1 69 GLY
+1 70 GLY
+1 71 GLY
+1 72 GLY
+1 73 GLY
+1 74 GLY
+1 75 GLY
+1 76 GLY
+1 77 GLY
+1 78 GLY
+1 79 GLY
+1 80 GLY
+1 81 GLY
+1 82 GLY
+1 83 GLY
+1 84 GLY
+1 85 GLY
+1 86 GLY
+1 87 GLY
+1 88 GLY
+1 89 GLY
+1 90 GLY
+1 91 GLY
+1 92 GLY
+1 93 GLY
+1 94 GLY
+1 95 GLY
+1 96 GLY
+1 97 GLY
+1 98 GLY
+1 99 GLY
+1 100 GLY
+1 101 GLY
+1 102 GLY
+1 103 GLY
+1 104 GLY
+1 105 GLY
+1 106 GLY
+1 107 GLY
+1 108 GLY
+1 109 GLY
+1 110 GLY
+1 111 GLY
+1 112 GLY
+1 113 GLY
+1 114 GLY
+1 115 GLY
+1 116 GLY
+1 117 GLY
+1 118 GLY
+1 119 GLY
+1 120 GLY
+1 121 GLY
+1 122 GLY
+1 123 GLY
+1 124 GLY
+1 125 GLY
+1 126 GLY
+1 127 GLY
+1 128 GLY
+1 129 GLY
+1 130 GLY
+1 131 GLY
+1 132 GLY
+1 133 GLY
+1 134 GLY
+1 135 GLY
+1 136 GLY
+1 137 GLY
+1 138 GLY
+1 139 GLY
+1 140 GLY
+1 141 GLY
+1 142 GLY
+1 143 GLY
+1 144 GLY
+
+loop_
+_atom_site.group_PDB
+_atom_site.id
+_atom_site.type_symbol
+_atom_site.label_atom_id
+_atom_site.label_alt_id
+_atom_site.label_comp_id
+_atom_site.label_asym_id
+_atom_site.label_entity_id
+_atom_site.label_seq_id
+_atom_site.pdbx_PDB_ins_code
+_atom_site.Cartn_x
+_atom_site.Cartn_y
+_atom_site.Cartn_z
+_atom_site.occupancy
+_atom_site.B_iso_or_equiv
+_atom_site.pdbx_formal_charge
+_atom_site.auth_seq_id
+_atom_site.auth_asym_id
+_atom_site.pdbx_PDB_model_num
+ATOM 1 N N . GLY A 1 1 ? 0 0 0 1 100 ? 1 A 1
+ATOM 2 C CA . GLY A 1 1 ? 0 0 0 1 100 ? 1 A 1
+ATOM 3 C C . GLY A 1 1 ? 0 0 0 1 100 ? 1 A 1
+ATOM 4 O O . GLY A 1 1 ? 0 0 0 1 100 ? 1 A 1
+ATOM 5 N N . GLY A 1 2 ? 0 0 0 1 100 ? 2 A 1
+ATOM 6 C CA . GLY A 1 2 ? 0 0 0 1 100 ? 2 A 1
+ATOM 7 C C . GLY A 1 2 ? 0 0 0 1 100 ? 2 A 1
+ATOM 8 O O . GLY A 1 2 ? 0 0 0 1 100 ? 2 A 1
+ATOM 9 N N . GLY A 1 3 ? 0 0 0 1 100 ? 3 A 1
+ATOM 10 C CA . GLY A 1 3 ? 0 0 0 1 100 ? 3 A 1
+ATOM 11 C C . GLY A 1 3 ? 0 0 0 1 100 ? 3 A 1
+ATOM 12 O O . GLY A 1 3 ? 0 0 0 1 100 ? 3 A 1
+ATOM 13 N N . GLY A 1 4 ? 0 0 0 1 100 ? 4 A 1
+ATOM 14 C CA . GLY A 1 4 ? 0 0 0 1 100 ? 4 A 1
+ATOM 15 C C . GLY A 1 4 ? 0 0 0 1 100 ? 4 A 1
+ATOM 16 O O . GLY A 1 4 ? 0 0 0 1 100 ? 4 A 1
+ATOM 17 N N . GLY A 1 5 ? 0 0 0 1 100 ? 5 A 1
+ATOM 18 C CA . GLY A 1 5 ? 0 0 0 1 100 ? 5 A 1
+ATOM 19 C C . GLY A 1 5 ? 0 0 0 1 100 ? 5 A 1
+ATOM 20 O O . GLY A 1 5 ? 0 0 0 1 100 ? 5 A 1
+ATOM 21 N N . GLY A 1 6 ? 0 0 0 1 100 ? 6 A 1
+ATOM 22 C CA . GLY A 1 6 ? 0 0 0 1 100 ? 6 A 1
+ATOM 23 C C . GLY A 1 6 ? 0 0 0 1 100 ? 6 A 1
+ATOM 24 O O . GLY A 1 6 ? 0 0 0 1 100 ? 6 A 1
+ATOM 25 N N . GLY A 1 7 ? 0 0 0 1 100 ? 7 A 1
+ATOM 26 C CA . GLY A 1 7 ? 0 0 0 1 100 ? 7 A 1
+ATOM 27 C C . GLY A 1 7 ? 0 0 0 1 100 ? 7 A 1
+ATOM 28 O O . GLY A 1 7 ? 0 0 0 1 100 ? 7 A 1
+ATOM 29 N N . GLY A 1 8 ? 0 0 0 1 100 ? 8 A 1
+ATOM 30 C CA . GLY A 1 8 ? 0 0 0 1 100 ? 8 A 1
+ATOM 31 C C . GLY A 1 8 ? 0 0 0 1 100 ? 8 A 1
+ATOM 32 O O . GLY A 1 8 ? 0 0 0 1 100 ? 8 A 1
+ATOM 33 N N . GLY A 1 9 ? 0 0 0 1 100 ? 9 A 1
+ATOM 34 C CA . GLY A 1 9 ? 0 0 0 1 100 ? 9 A 1
+ATOM 35 C C . GLY A 1 9 ? 0 0 0 1 100 ? 9 A 1
+ATOM 36 O O . GLY A 1 9 ? 0 0 0 1 100 ? 9 A 1
+ATOM 37 N N . GLY A 1 10 ? 0 0 0 1 100 ? 10 A 1
+ATOM 38 C CA . GLY A 1 10 ? 0 0 0 1 100 ? 10 A 1
+ATOM 39 C C . GLY A 1 10 ? 0 0 0 1 100 ? 10 A 1
+ATOM 40 O O . GLY A 1 10 ? 0 0 0 1 100 ? 10 A 1
+ATOM 41 N N . GLY A 1 11 ? 0 0 0 1 100 ? 11 A 1
+ATOM 42 C CA . GLY A 1 11 ? 0 0 0 1 100 ? 11 A 1
+ATOM 43 C C . GLY A 1 11 ? 0 0 0 1 100 ? 11 A 1
+ATOM 44 O O . GLY A 1 11 ? 0 0 0 1 100 ? 11 A 1
+ATOM 45 N N . GLY A 1 12 ? 0 0 0 1 100 ? 12 A 1
+ATOM 46 C CA . GLY A 1 12 ? 0 0 0 1 100 ? 12 A 1
+ATOM 47 C C . GLY A 1 12 ? 0 0 0 1 100 ? 12 A 1
+ATOM 48 O O . GLY A 1 12 ? 0 0 0 1 100 ? 12 A 1
+ATOM 49 N N . GLY A 1 13 ? 0 0 0 1 100 ? 13 A 1
+ATOM 50 C CA . GLY A 1 13 ? 0 0 0 1 100 ? 13 A 1
+ATOM 51 C C . GLY A 1 13 ? 0 0 0 1 100 ? 13 A 1
+ATOM 52 O O . GLY A 1 13 ? 0 0 0 1 100 ? 13 A 1
+ATOM 53 N N . GLY A 1 14 ? 0 0 0 1 100 ? 14 A 1
+ATOM 54 C CA . GLY A 1 14 ? 0 0 0 1 100 ? 14 A 1
+ATOM 55 C C . GLY A 1 14 ? 0 0 0 1 100 ? 14 A 1
+ATOM 56 O O . GLY A 1 14 ? 0 0 0 1 100 ? 14 A 1
+ATOM 57 N N . GLY A 1 15 ? 0 0 0 1 100 ? 15 A 1
+ATOM 58 C CA . GLY A 1 15 ? 0 0 0 1 100 ? 15 A 1
+ATOM 59 C C . GLY A 1 15 ? 0 0 0 1 100 ? 15 A 1
+ATOM 60 O O . GLY A 1 15 ? 0 0 0 1 100 ? 15 A 1
+ATOM 61 N N . GLY A 1 16 ? 0 0 0 1 100 ? 16 A 1
+ATOM 62 C CA . GLY A 1 16 ? 0 0 0 1 100 ? 16 A 1
+ATOM 63 C C . GLY A 1 16 ? 0 0 0 1 100 ? 16 A 1
+ATOM 64 O O . GLY A 1 16 ? 0 0 0 1 100 ? 16 A 1
+ATOM 65 N N . GLY A 1 17 ? 0 0 0 1 100 ? 17 A 1
+ATOM 66 C CA . GLY A 1 17 ? 0 0 0 1 100 ? 17 A 1
+ATOM 67 C C . GLY A 1 17 ? 0 0 0 1 100 ? 17 A 1
+ATOM 68 O O . GLY A 1 17 ? 0 0 0 1 100 ? 17 A 1
+ATOM 69 N N . GLY A 1 18 ? 0 0 0 1 100 ? 18 A 1
+ATOM 70 C CA . GLY A 1 18 ? 0 0 0 1 100 ? 18 A 1
+ATOM 71 C C . GLY A 1 18 ? 0 0 0 1 100 ? 18 A 1
+ATOM 72 O O . GLY A 1 18 ? 0 0 0 1 100 ? 18 A 1
+ATOM 73 N N . GLY A 1 19 ? 0 0 0 1 100 ? 19 A 1
+ATOM 74 C CA . GLY A 1 19 ? 0 0 0 1 100 ? 19 A 1
+ATOM 75 C C . GLY A 1 19 ? 0 0 0 1 100 ? 19 A 1
+ATOM 76 O O . GLY A 1 19 ? 0 0 0 1 100 ? 19 A 1
+ATOM 77 N N . GLY A 1 20 ? 0 0 0 1 100 ? 20 A 1
+ATOM 78 C CA . GLY A 1 20 ? 0 0 0 1 100 ? 20 A 1
+ATOM 79 C C . GLY A 1 20 ? 0 0 0 1 100 ? 20 A 1
+ATOM 80 O O . GLY A 1 20 ? 0 0 0 1 100 ? 20 A 1
+ATOM 81 N N . GLY A 1 21 ? 0 0 0 1 100 ? 21 A 1
+ATOM 82 C CA . GLY A 1 21 ? 0 0 0 1 100 ? 21 A 1
+ATOM 83 C C . GLY A 1 21 ? 0 0 0 1 100 ? 21 A 1
+ATOM 84 O O . GLY A 1 21 ? 0 0 0 1 100 ? 21 A 1
+ATOM 85 N N . GLY A 1 22 ? 0 0 0 1 100 ? 22 A 1
+ATOM 86 C CA . GLY A 1 22 ? 0 0 0 1 100 ? 22 A 1
+ATOM 87 C C . GLY A 1 22 ? 0 0 0 1 100 ? 22 A 1
+ATOM 88 O O . GLY A 1 22 ? 0 0 0 1 100 ? 22 A 1
+ATOM 89 N N . GLY A 1 23 ? 0 0 0 1 100 ? 23 A 1
+ATOM 90 C CA . GLY A 1 23 ? 0 0 0 1 100 ? 23 A 1
+ATOM 91 C C . GLY A 1 23 ? 0 0 0 1 100 ? 23 A 1
+ATOM 92 O O . GLY A 1 23 ? 0 0 0 1 100 ? 23 A 1
+ATOM 93 N N . GLY A 1 24 ? 0 0 0 1 100 ? 24 A 1
+ATOM 94 C CA . GLY A 1 24 ? 0 0 0 1 100 ? 24 A 1
+ATOM 95 C C . GLY A 1 24 ? 0 0 0 1 100 ? 24 A 1
+ATOM 96 O O . GLY A 1 24 ? 0 0 0 1 100 ? 24 A 1
+ATOM 97 N N . GLY A 1 25 ? 0 0 0 1 100 ? 25 A 1
+ATOM 98 C CA . GLY A 1 25 ? 0 0 0 1 100 ? 25 A 1
+ATOM 99 C C . GLY A 1 25 ? 0 0 0 1 100 ? 25 A 1
+ATOM 100 O O . GLY A 1 25 ? 0 0 0 1 100 ? 25 A 1
+ATOM 101 N N . GLY A 1 26 ? 0 0 0 1 100 ? 26 A 1
+ATOM 102 C CA . GLY A 1 26 ? 0 0 0 1 100 ? 26 A 1
+ATOM 103 C C . GLY A 1 26 ? 0 0 0 1 100 ? 26 A 1
+ATOM 104 O O . GLY A 1 26 ? 0 0 0 1 100 ? 26 A 1
+ATOM 105 N N . GLY A 1 27 ? 0 0 0 1 100 ? 27 A 1
+ATOM 106 C CA . GLY A 1 27 ? 0 0 0 1 100 ? 27 A 1
+ATOM 107 C C . GLY A 1 27 ? 0 0 0 1 100 ? 27 A 1
+ATOM 108 O O . GLY A 1 27 ? 0 0 0 1 100 ? 27 A 1
+ATOM 109 N N . GLY A 1 28 ? 0 0 0 1 100 ? 28 A 1
+ATOM 110 C CA . GLY A 1 28 ? 0 0 0 1 100 ? 28 A 1
+ATOM 111 C C . GLY A 1 28 ? 0 0 0 1 100 ? 28 A 1
+ATOM 112 O O . GLY A 1 28 ? 0 0 0 1 100 ? 28 A 1
+ATOM 113 N N . GLY A 1 29 ? 0 0 0 1 100 ? 29 A 1
+ATOM 114 C CA . GLY A 1 29 ? 0 0 0 1 100 ? 29 A 1
+ATOM 115 C C . GLY A 1 29 ? 0 0 0 1 100 ? 29 A 1
+ATOM 116 O O . GLY A 1 29 ? 0 0 0 1 100 ? 29 A 1
+ATOM 117 N N . GLY A 1 30 ? 0 0 0 1 100 ? 30 A 1
+ATOM 118 C CA . GLY A 1 30 ? 0 0 0 1 100 ? 30 A 1
+ATOM 119 C C . GLY A 1 30 ? 0 0 0 1 100 ? 30 A 1
+ATOM 120 O O . GLY A 1 30 ? 0 0 0 1 100 ? 30 A 1
+ATOM 121 N N . GLY A 1 31 ? 0 0 0 1 100 ? 31 A 1
+ATOM 122 C CA . GLY A 1 31 ? 0 0 0 1 100 ? 31 A 1
+ATOM 123 C C . GLY A 1 31 ? 0 0 0 1 100 ? 31 A 1
+ATOM 124 O O . GLY A 1 31 ? 0 0 0 1 100 ? 31 A 1
+ATOM 125 N N . GLY A 1 32 ? 0 0 0 1 100 ? 32 A 1
+ATOM 126 C CA . GLY A 1 32 ? 0 0 0 1 100 ? 32 A 1
+ATOM 127 C C . GLY A 1 32 ? 0 0 0 1 100 ? 32 A 1
+ATOM 128 O O . GLY A 1 32 ? 0 0 0 1 100 ? 32 A 1
+ATOM 129 N N . GLY A 1 33 ? 0 0 0 1 100 ? 33 A 1
+ATOM 130 C CA . GLY A 1 33 ? 0 0 0 1 100 ? 33 A 1
+ATOM 131 C C . GLY A 1 33 ? 0 0 0 1 100 ? 33 A 1
+ATOM 132 O O . GLY A 1 33 ? 0 0 0 1 100 ? 33 A 1
+ATOM 133 N N . GLY A 1 34 ? 0 0 0 1 100 ? 34 A 1
+ATOM 134 C CA . GLY A 1 34 ? 0 0 0 1 100 ? 34 A 1
+ATOM 135 C C . GLY A 1 34 ? 0 0 0 1 100 ? 34 A 1
+ATOM 136 O O . GLY A 1 34 ? 0 0 0 1 100 ? 34 A 1
+ATOM 137 N N . GLY A 1 35 ? 0 0 0 1 100 ? 35 A 1
+ATOM 138 C CA . GLY A 1 35 ? 0 0 0 1 100 ? 35 A 1
+ATOM 139 C C . GLY A 1 35 ? 0 0 0 1 100 ? 35 A 1
+ATOM 140 O O . GLY A 1 35 ? 0 0 0 1 100 ? 35 A 1
+ATOM 141 N N . GLY A 1 36 ? 0 0 0 1 100 ? 36 A 1
+ATOM 142 C CA . GLY A 1 36 ? 0 0 0 1 100 ? 36 A 1
+ATOM 143 C C . GLY A 1 36 ? 0 0 0 1 100 ? 36 A 1
+ATOM 144 O O . GLY A 1 36 ? 0 0 0 1 100 ? 36 A 1
+ATOM 145 N N . GLY A 1 37 ? 0 0 0 1 100 ? 37 A 1
+ATOM 146 C CA . GLY A 1 37 ? 0 0 0 1 100 ? 37 A 1
+ATOM 147 C C . GLY A 1 37 ? 0 0 0 1 100 ? 37 A 1
+ATOM 148 O O . GLY A 1 37 ? 0 0 0 1 100 ? 37 A 1
+ATOM 149 N N . GLY A 1 38 ? 0 0 0 1 100 ? 38 A 1
+ATOM 150 C CA . GLY A 1 38 ? 0 0 0 1 100 ? 38 A 1
+ATOM 151 C C . GLY A 1 38 ? 0 0 0 1 100 ? 38 A 1
+ATOM 152 O O . GLY A 1 38 ? 0 0 0 1 100 ? 38 A 1
+ATOM 153 N N . GLY A 1 39 ? 0 0 0 1 100 ? 39 A 1
+ATOM 154 C CA . GLY A 1 39 ? 0 0 0 1 100 ? 39 A 1
+ATOM 155 C C . GLY A 1 39 ? 0 0 0 1 100 ? 39 A 1
+ATOM 156 O O . GLY A 1 39 ? 0 0 0 1 100 ? 39 A 1
+ATOM 157 N N . GLY A 1 40 ? 0 0 0 1 100 ? 40 A 1
+ATOM 158 C CA . GLY A 1 40 ? 0 0 0 1 100 ? 40 A 1
+ATOM 159 C C . GLY A 1 40 ? 0 0 0 1 100 ? 40 A 1
+ATOM 160 O O . GLY A 1 40 ? 0 0 0 1 100 ? 40 A 1
+ATOM 161 N N . GLY A 1 41 ? 0 0 0 1 100 ? 41 A 1
+ATOM 162 C CA . GLY A 1 41 ? 0 0 0 1 100 ? 41 A 1
+ATOM 163 C C . GLY A 1 41 ? 0 0 0 1 100 ? 41 A 1
+ATOM 164 O O . GLY A 1 41 ? 0 0 0 1 100 ? 41 A 1
+ATOM 165 N N . GLY A 1 42 ? 0 0 0 1 100 ? 42 A 1
+ATOM 166 C CA . GLY A 1 42 ? 0 0 0 1 100 ? 42 A 1
+ATOM 167 C C . GLY A 1 42 ? 0 0 0 1 100 ? 42 A 1
+ATOM 168 O O . GLY A 1 42 ? 0 0 0 1 100 ? 42 A 1
+ATOM 169 N N . GLY A 1 43 ? 0 0 0 1 100 ? 43 A 1
+ATOM 170 C CA . GLY A 1 43 ? 0 0 0 1 100 ? 43 A 1
+ATOM 171 C C . GLY A 1 43 ? 0 0 0 1 100 ? 43 A 1
+ATOM 172 O O . GLY A 1 43 ? 0 0 0 1 100 ? 43 A 1
+ATOM 173 N N . GLY A 1 44 ? 0 0 0 1 100 ? 44 A 1
+ATOM 174 C CA . GLY A 1 44 ? 0 0 0 1 100 ? 44 A 1
+ATOM 175 C C . GLY A 1 44 ? 0 0 0 1 100 ? 44 A 1
+ATOM 176 O O . GLY A 1 44 ? 0 0 0 1 100 ? 44 A 1
+ATOM 177 N N . GLY A 1 45 ? 0 0 0 1 100 ? 45 A 1
+ATOM 178 C CA . GLY A 1 45 ? 0 0 0 1 100 ? 45 A 1
+ATOM 179 C C . GLY A 1 45 ? 0 0 0 1 100 ? 45 A 1
+ATOM 180 O O . GLY A 1 45 ? 0 0 0 1 100 ? 45 A 1
+ATOM 181 N N . GLY A 1 46 ? 0 0 0 1 100 ? 46 A 1
+ATOM 182 C CA . GLY A 1 46 ? 0 0 0 1 100 ? 46 A 1
+ATOM 183 C C . GLY A 1 46 ? 0 0 0 1 100 ? 46 A 1
+ATOM 184 O O . GLY A 1 46 ? 0 0 0 1 100 ? 46 A 1
+ATOM 185 N N . GLY A 1 47 ? 0 0 0 1 100 ? 47 A 1
+ATOM 186 C CA . GLY A 1 47 ? 0 0 0 1 100 ? 47 A 1
+ATOM 187 C C . GLY A 1 47 ? 0 0 0 1 100 ? 47 A 1
+ATOM 188 O O . GLY A 1 47 ? 0 0 0 1 100 ? 47 A 1
+ATOM 189 N N . GLY A 1 48 ? 0 0 0 1 100 ? 48 A 1
+ATOM 190 C CA . GLY A 1 48 ? 0 0 0 1 100 ? 48 A 1
+ATOM 191 C C . GLY A 1 48 ? 0 0 0 1 100 ? 48 A 1
+ATOM 192 O O . GLY A 1 48 ? 0 0 0 1 100 ? 48 A 1
+ATOM 193 N N . GLY A 1 49 ? 0 0 0 1 100 ? 49 A 1
+ATOM 194 C CA . GLY A 1 49 ? 0 0 0 1 100 ? 49 A 1
+ATOM 195 C C . GLY A 1 49 ? 0 0 0 1 100 ? 49 A 1
+ATOM 196 O O . GLY A 1 49 ? 0 0 0 1 100 ? 49 A 1
+ATOM 197 N N . GLY A 1 50 ? 0 0 0 1 100 ? 50 A 1
+ATOM 198 C CA . GLY A 1 50 ? 0 0 0 1 100 ? 50 A 1
+ATOM 199 C C . GLY A 1 50 ? 0 0 0 1 100 ? 50 A 1
+ATOM 200 O O . GLY A 1 50 ? 0 0 0 1 100 ? 50 A 1
+ATOM 201 N N . GLY A 1 51 ? 0 0 0 1 100 ? 51 A 1
+ATOM 202 C CA . GLY A 1 51 ? 0 0 0 1 100 ? 51 A 1
+ATOM 203 C C . GLY A 1 51 ? 0 0 0 1 100 ? 51 A 1
+ATOM 204 O O . GLY A 1 51 ? 0 0 0 1 100 ? 51 A 1
+ATOM 205 N N . GLY A 1 52 ? 0 0 0 1 100 ? 52 A 1
+ATOM 206 C CA . GLY A 1 52 ? 0 0 0 1 100 ? 52 A 1
+ATOM 207 C C . GLY A 1 52 ? 0 0 0 1 100 ? 52 A 1
+ATOM 208 O O . GLY A 1 52 ? 0 0 0 1 100 ? 52 A 1
+ATOM 209 N N . GLY A 1 53 ? 0 0 0 1 100 ? 53 A 1
+ATOM 210 C CA . GLY A 1 53 ? 0 0 0 1 100 ? 53 A 1
+ATOM 211 C C . GLY A 1 53 ? 0 0 0 1 100 ? 53 A 1
+ATOM 212 O O . GLY A 1 53 ? 0 0 0 1 100 ? 53 A 1
+ATOM 213 N N . GLY A 1 54 ? 0 0 0 1 100 ? 54 A 1
+ATOM 214 C CA . GLY A 1 54 ? 0 0 0 1 100 ? 54 A 1
+ATOM 215 C C . GLY A 1 54 ? 0 0 0 1 100 ? 54 A 1
+ATOM 216 O O . GLY A 1 54 ? 0 0 0 1 100 ? 54 A 1
+ATOM 217 N N . GLY A 1 55 ? 0 0 0 1 100 ? 55 A 1
+ATOM 218 C CA . GLY A 1 55 ? 0 0 0 1 100 ? 55 A 1
+ATOM 219 C C . GLY A 1 55 ? 0 0 0 1 100 ? 55 A 1
+ATOM 220 O O . GLY A 1 55 ? 0 0 0 1 100 ? 55 A 1
+ATOM 221 N N . GLY A 1 56 ? 0 0 0 1 100 ? 56 A 1
+ATOM 222 C CA . GLY A 1 56 ? 0 0 0 1 100 ? 56 A 1
+ATOM 223 C C . GLY A 1 56 ? 0 0 0 1 100 ? 56 A 1
+ATOM 224 O O . GLY A 1 56 ? 0 0 0 1 100 ? 56 A 1
+ATOM 225 N N . GLY A 1 57 ? 0 0 0 1 100 ? 57 A 1
+ATOM 226 C CA . GLY A 1 57 ? 0 0 0 1 100 ? 57 A 1
+ATOM 227 C C . GLY A 1 57 ? 0 0 0 1 100 ? 57 A 1
+ATOM 228 O O . GLY A 1 57 ? 0 0 0 1 100 ? 57 A 1
+ATOM 229 N N . GLY A 1 58 ? 0 0 0 1 100 ? 58 A 1
+ATOM 230 C CA . GLY A 1 58 ? 0 0 0 1 100 ? 58 A 1
+ATOM 231 C C . GLY A 1 58 ? 0 0 0 1 100 ? 58 A 1
+ATOM 232 O O . GLY A 1 58 ? 0 0 0 1 100 ? 58 A 1
+ATOM 233 N N . GLY A 1 59 ? 0 0 0 1 100 ? 59 A 1
+ATOM 234 C CA . GLY A 1 59 ? 0 0 0 1 100 ? 59 A 1
+ATOM 235 C C . GLY A 1 59 ? 0 0 0 1 100 ? 59 A 1
+ATOM 236 O O . GLY A 1 59 ? 0 0 0 1 100 ? 59 A 1
+ATOM 237 N N . GLY A 1 60 ? 0 0 0 1 100 ? 60 A 1
+ATOM 238 C CA . GLY A 1 60 ? 0 0 0 1 100 ? 60 A 1
+ATOM 239 C C . GLY A 1 60 ? 0 0 0 1 100 ? 60 A 1
+ATOM 240 O O . GLY A 1 60 ? 0 0 0 1 100 ? 60 A 1
+ATOM 241 N N . GLY A 1 61 ? 0 0 0 1 100 ? 61 A 1
+ATOM 242 C CA . GLY A 1 61 ? 0 0 0 1 100 ? 61 A 1
+ATOM 243 C C . GLY A 1 61 ? 0 0 0 1 100 ? 61 A 1
+ATOM 244 O O . GLY A 1 61 ? 0 0 0 1 100 ? 61 A 1
+ATOM 245 N N . GLY A 1 62 ? 0 0 0 1 100 ? 62 A 1
+ATOM 246 C CA . GLY A 1 62 ? 0 0 0 1 100 ? 62 A 1
+ATOM 247 C C . GLY A 1 62 ? 0 0 0 1 100 ? 62 A 1
+ATOM 248 O O . GLY A 1 62 ? 0 0 0 1 100 ? 62 A 1
+ATOM 249 N N . GLY A 1 63 ? 0 0 0 1 100 ? 63 A 1
+ATOM 250 C CA . GLY A 1 63 ? 0 0 0 1 100 ? 63 A 1
+ATOM 251 C C . GLY A 1 63 ? 0 0 0 1 100 ? 63 A 1
+ATOM 252 O O . GLY A 1 63 ? 0 0 0 1 100 ? 63 A 1
+ATOM 253 N N . GLY A 1 64 ? 0 0 0 1 100 ? 64 A 1
+ATOM 254 C CA . GLY A 1 64 ? 0 0 0 1 100 ? 64 A 1
+ATOM 255 C C . GLY A 1 64 ? 0 0 0 1 100 ? 64 A 1
+ATOM 256 O O . GLY A 1 64 ? 0 0 0 1 100 ? 64 A 1
+ATOM 257 N N . GLY A 1 65 ? 0 0 0 1 100 ? 65 A 1
+ATOM 258 C CA . GLY A 1 65 ? 0 0 0 1 100 ? 65 A 1
+ATOM 259 C C . GLY A 1 65 ? 0 0 0 1 100 ? 65 A 1
+ATOM 260 O O . GLY A 1 65 ? 0 0 0 1 100 ? 65 A 1
+ATOM 261 N N . GLY A 1 66 ? 0 0 0 1 100 ? 66 A 1
+ATOM 262 C CA . GLY A 1 66 ? 0 0 0 1 100 ? 66 A 1
+ATOM 263 C C . GLY A 1 66 ? 0 0 0 1 100 ? 66 A 1
+ATOM 264 O O . GLY A 1 66 ? 0 0 0 1 100 ? 66 A 1
+ATOM 265 N N . GLY A 1 67 ? 0 0 0 1 100 ? 67 A 1
+ATOM 266 C CA . GLY A 1 67 ? 0 0 0 1 100 ? 67 A 1
+ATOM 267 C C . GLY A 1 67 ? 0 0 0 1 100 ? 67 A 1
+ATOM 268 O O . GLY A 1 67 ? 0 0 0 1 100 ? 67 A 1
+ATOM 269 N N . GLY A 1 68 ? 0 0 0 1 100 ? 68 A 1
+ATOM 270 C CA . GLY A 1 68 ? 0 0 0 1 100 ? 68 A 1
+ATOM 271 C C . GLY A 1 68 ? 0 0 0 1 100 ? 68 A 1
+ATOM 272 O O . GLY A 1 68 ? 0 0 0 1 100 ? 68 A 1
+ATOM 273 N N . GLY A 1 69 ? 0 0 0 1 100 ? 69 A 1
+ATOM 274 C CA . GLY A 1 69 ? 0 0 0 1 100 ? 69 A 1
+ATOM 275 C C . GLY A 1 69 ? 0 0 0 1 100 ? 69 A 1
+ATOM 276 O O . GLY A 1 69 ? 0 0 0 1 100 ? 69 A 1
+ATOM 277 N N . GLY A 1 70 ? 0 0 0 1 100 ? 70 A 1
+ATOM 278 C CA . GLY A 1 70 ? 0 0 0 1 100 ? 70 A 1
+ATOM 279 C C . GLY A 1 70 ? 0 0 0 1 100 ? 70 A 1
+ATOM 280 O O . GLY A 1 70 ? 0 0 0 1 100 ? 70 A 1
+ATOM 281 N N . GLY A 1 71 ? 0 0 0 1 100 ? 71 A 1
+ATOM 282 C CA . GLY A 1 71 ? 0 0 0 1 100 ? 71 A 1
+ATOM 283 C C . GLY A 1 71 ? 0 0 0 1 100 ? 71 A 1
+ATOM 284 O O . GLY A 1 71 ? 0 0 0 1 100 ? 71 A 1
+ATOM 285 N N . GLY A 1 72 ? 0 0 0 1 100 ? 72 A 1
+ATOM 286 C CA . GLY A 1 72 ? 0 0 0 1 100 ? 72 A 1
+ATOM 287 C C . GLY A 1 72 ? 0 0 0 1 100 ? 72 A 1
+ATOM 288 O O . GLY A 1 72 ? 0 0 0 1 100 ? 72 A 1
+ATOM 289 N N . GLY A 1 73 ? 0 0 0 1 100 ? 73 A 1
+ATOM 290 C CA . GLY A 1 73 ? 0 0 0 1 100 ? 73 A 1
+ATOM 291 C C . GLY A 1 73 ? 0 0 0 1 100 ? 73 A 1
+ATOM 292 O O . GLY A 1 73 ? 0 0 0 1 100 ? 73 A 1
+ATOM 293 N N . GLY A 1 74 ? 0 0 0 1 100 ? 74 A 1
+ATOM 294 C CA . GLY A 1 74 ? 0 0 0 1 100 ? 74 A 1
+ATOM 295 C C . GLY A 1 74 ? 0 0 0 1 100 ? 74 A 1
+ATOM 296 O O . GLY A 1 74 ? 0 0 0 1 100 ? 74 A 1
+ATOM 297 N N . GLY A 1 75 ? 0 0 0 1 100 ? 75 A 1
+ATOM 298 C CA . GLY A 1 75 ? 0 0 0 1 100 ? 75 A 1
+ATOM 299 C C . GLY A 1 75 ? 0 0 0 1 100 ? 75 A 1
+ATOM 300 O O . GLY A 1 75 ? 0 0 0 1 100 ? 75 A 1
+ATOM 301 N N . GLY A 1 76 ? 0 0 0 1 100 ? 76 A 1
+ATOM 302 C CA . GLY A 1 76 ? 0 0 0 1 100 ? 76 A 1
+ATOM 303 C C . GLY A 1 76 ? 0 0 0 1 100 ? 76 A 1
+ATOM 304 O O . GLY A 1 76 ? 0 0 0 1 100 ? 76 A 1
+ATOM 305 N N . GLY A 1 77 ? 0 0 0 1 100 ? 77 A 1
+ATOM 306 C CA . GLY A 1 77 ? 0 0 0 1 100 ? 77 A 1
+ATOM 307 C C . GLY A 1 77 ? 0 0 0 1 100 ? 77 A 1
+ATOM 308 O O . GLY A 1 77 ? 0 0 0 1 100 ? 77 A 1
+ATOM 309 N N . GLY A 1 78 ? 0 0 0 1 100 ? 78 A 1
+ATOM 310 C CA . GLY A 1 78 ? 0 0 0 1 100 ? 78 A 1
+ATOM 311 C C . GLY A 1 78 ? 0 0 0 1 100 ? 78 A 1
+ATOM 312 O O . GLY A 1 78 ? 0 0 0 1 100 ? 78 A 1
+ATOM 313 N N . GLY A 1 79 ? 0 0 0 1 100 ? 79 A 1
+ATOM 314 C CA . GLY A 1 79 ? 0 0 0 1 100 ? 79 A 1
+ATOM 315 C C . GLY A 1 79 ? 0 0 0 1 100 ? 79 A 1
+ATOM 316 O O . GLY A 1 79 ? 0 0 0 1 100 ? 79 A 1
+ATOM 317 N N . GLY A 1 80 ? 0 0 0 1 100 ? 80 A 1
+ATOM 318 C CA . GLY A 1 80 ? 0 0 0 1 100 ? 80 A 1
+ATOM 319 C C . GLY A 1 80 ? 0 0 0 1 100 ? 80 A 1
+ATOM 320 O O . GLY A 1 80 ? 0 0 0 1 100 ? 80 A 1
+ATOM 321 N N . GLY A 1 81 ? 0 0 0 1 100 ? 81 A 1
+ATOM 322 C CA . GLY A 1 81 ? 0 0 0 1 100 ? 81 A 1
+ATOM 323 C C . GLY A 1 81 ? 0 0 0 1 100 ? 81 A 1
+ATOM 324 O O . GLY A 1 81 ? 0 0 0 1 100 ? 81 A 1
+ATOM 325 N N . GLY A 1 82 ? 0 0 0 1 100 ? 82 A 1
+ATOM 326 C CA . GLY A 1 82 ? 0 0 0 1 100 ? 82 A 1
+ATOM 327 C C . GLY A 1 82 ? 0 0 0 1 100 ? 82 A 1
+ATOM 328 O O . GLY A 1 82 ? 0 0 0 1 100 ? 82 A 1
+ATOM 329 N N . GLY A 1 83 ? 0 0 0 1 100 ? 83 A 1
+ATOM 330 C CA . GLY A 1 83 ? 0 0 0 1 100 ? 83 A 1
+ATOM 331 C C . GLY A 1 83 ? 0 0 0 1 100 ? 83 A 1
+ATOM 332 O O . GLY A 1 83 ? 0 0 0 1 100 ? 83 A 1
+ATOM 333 N N . GLY A 1 84 ? 0 0 0 1 100 ? 84 A 1
+ATOM 334 C CA . GLY A 1 84 ? 0 0 0 1 100 ? 84 A 1
+ATOM 335 C C . GLY A 1 84 ? 0 0 0 1 100 ? 84 A 1
+ATOM 336 O O . GLY A 1 84 ? 0 0 0 1 100 ? 84 A 1
+ATOM 337 N N . GLY A 1 85 ? 0 0 0 1 100 ? 85 A 1
+ATOM 338 C CA . GLY A 1 85 ? 0 0 0 1 100 ? 85 A 1
+ATOM 339 C C . GLY A 1 85 ? 0 0 0 1 100 ? 85 A 1
+ATOM 340 O O . GLY A 1 85 ? 0 0 0 1 100 ? 85 A 1
+ATOM 341 N N . GLY A 1 86 ? 0 0 0 1 100 ? 86 A 1
+ATOM 342 C CA . GLY A 1 86 ? 0 0 0 1 100 ? 86 A 1
+ATOM 343 C C . GLY A 1 86 ? 0 0 0 1 100 ? 86 A 1
+ATOM 344 O O . GLY A 1 86 ? 0 0 0 1 100 ? 86 A 1
+ATOM 345 N N . GLY A 1 87 ? 0 0 0 1 100 ? 87 A 1
+ATOM 346 C CA . GLY A 1 87 ? 0 0 0 1 100 ? 87 A 1
+ATOM 347 C C . GLY A 1 87 ? 0 0 0 1 100 ? 87 A 1
+ATOM 348 O O . GLY A 1 87 ? 0 0 0 1 100 ? 87 A 1
+ATOM 349 N N . GLY A 1 88 ? 0 0 0 1 100 ? 88 A 1
+ATOM 350 C CA . GLY A 1 88 ? 0 0 0 1 100 ? 88 A 1
+ATOM 351 C C . GLY A 1 88 ? 0 0 0 1 100 ? 88 A 1
+ATOM 352 O O . GLY A 1 88 ? 0 0 0 1 100 ? 88 A 1
+ATOM 353 N N . GLY A 1 89 ? 0 0 0 1 100 ? 89 A 1
+ATOM 354 C CA . GLY A 1 89 ? 0 0 0 1 100 ? 89 A 1
+ATOM 355 C C . GLY A 1 89 ? 0 0 0 1 100 ? 89 A 1
+ATOM 356 O O . GLY A 1 89 ? 0 0 0 1 100 ? 89 A 1
+ATOM 357 N N . GLY A 1 90 ? 0 0 0 1 100 ? 90 A 1
+ATOM 358 C CA . GLY A 1 90 ? 0 0 0 1 100 ? 90 A 1
+ATOM 359 C C . GLY A 1 90 ? 0 0 0 1 100 ? 90 A 1
+ATOM 360 O O . GLY A 1 90 ? 0 0 0 1 100 ? 90 A 1
+ATOM 361 N N . GLY A 1 91 ? 0 0 0 1 100 ? 91 A 1
+ATOM 362 C CA . GLY A 1 91 ? 0 0 0 1 100 ? 91 A 1
+ATOM 363 C C . GLY A 1 91 ? 0 0 0 1 100 ? 91 A 1
+ATOM 364 O O . GLY A 1 91 ? 0 0 0 1 100 ? 91 A 1
+ATOM 365 N N . GLY A 1 92 ? 0 0 0 1 100 ? 92 A 1
+ATOM 366 C CA . GLY A 1 92 ? 0 0 0 1 100 ? 92 A 1
+ATOM 367 C C . GLY A 1 92 ? 0 0 0 1 100 ? 92 A 1
+ATOM 368 O O . GLY A 1 92 ? 0 0 0 1 100 ? 92 A 1
+ATOM 369 N N . GLY A 1 93 ? 0 0 0 1 100 ? 93 A 1
+ATOM 370 C CA . GLY A 1 93 ? 0 0 0 1 100 ? 93 A 1
+ATOM 371 C C . GLY A 1 93 ? 0 0 0 1 100 ? 93 A 1
+ATOM 372 O O . GLY A 1 93 ? 0 0 0 1 100 ? 93 A 1
+ATOM 373 N N . GLY A 1 94 ? 0 0 0 1 100 ? 94 A 1
+ATOM 374 C CA . GLY A 1 94 ? 0 0 0 1 100 ? 94 A 1
+ATOM 375 C C . GLY A 1 94 ? 0 0 0 1 100 ? 94 A 1
+ATOM 376 O O . GLY A 1 94 ? 0 0 0 1 100 ? 94 A 1
+ATOM 377 N N . GLY A 1 95 ? 0 0 0 1 100 ? 95 A 1
+ATOM 378 C CA . GLY A 1 95 ? 0 0 0 1 100 ? 95 A 1
+ATOM 379 C C . GLY A 1 95 ? 0 0 0 1 100 ? 95 A 1
+ATOM 380 O O . GLY A 1 95 ? 0 0 0 1 100 ? 95 A 1
+ATOM 381 N N . GLY A 1 96 ? 0 0 0 1 100 ? 96 A 1
+ATOM 382 C CA . GLY A 1 96 ? 0 0 0 1 100 ? 96 A 1
+ATOM 383 C C . GLY A 1 96 ? 0 0 0 1 100 ? 96 A 1
+ATOM 384 O O . GLY A 1 96 ? 0 0 0 1 100 ? 96 A 1
+ATOM 385 N N . GLY A 1 97 ? 0 0 0 1 100 ? 97 A 1
+ATOM 386 C CA . GLY A 1 97 ? 0 0 0 1 100 ? 97 A 1
+ATOM 387 C C . GLY A 1 97 ? 0 0 0 1 100 ? 97 A 1
+ATOM 388 O O . GLY A 1 97 ? 0 0 0 1 100 ? 97 A 1
+ATOM 389 N N . GLY A 1 98 ? 0 0 0 1 100 ? 98 A 1
+ATOM 390 C CA . GLY A 1 98 ? 0 0 0 1 100 ? 98 A 1
+ATOM 391 C C . GLY A 1 98 ? 0 0 0 1 100 ? 98 A 1
+ATOM 392 O O . GLY A 1 98 ? 0 0 0 1 100 ? 98 A 1
+ATOM 393 N N . GLY A 1 99 ? 0 0 0 1 100 ? 99 A 1
+ATOM 394 C CA . GLY A 1 99 ? 0 0 0 1 100 ? 99 A 1
+ATOM 395 C C . GLY A 1 99 ? 0 0 0 1 100 ? 99 A 1
+ATOM 396 O O . GLY A 1 99 ? 0 0 0 1 100 ? 99 A 1
+ATOM 397 N N . GLY A 1 100 ? 0 0 0 1 100 ? 100 A 1
+ATOM 398 C CA . GLY A 1 100 ? 0 0 0 1 100 ? 100 A 1
+ATOM 399 C C . GLY A 1 100 ? 0 0 0 1 100 ? 100 A 1
+ATOM 400 O O . GLY A 1 100 ? 0 0 0 1 100 ? 100 A 1
+ATOM 401 N N . GLY A 1 101 ? 0 0 0 1 100 ? 101 A 1
+ATOM 402 C CA . GLY A 1 101 ? 0 0 0 1 100 ? 101 A 1
+ATOM 403 C C . GLY A 1 101 ? 0 0 0 1 100 ? 101 A 1
+ATOM 404 O O . GLY A 1 101 ? 0 0 0 1 100 ? 101 A 1
+ATOM 405 N N . GLY A 1 102 ? 0 0 0 1 100 ? 102 A 1
+ATOM 406 C CA . GLY A 1 102 ? 0 0 0 1 100 ? 102 A 1
+ATOM 407 C C . GLY A 1 102 ? 0 0 0 1 100 ? 102 A 1
+ATOM 408 O O . GLY A 1 102 ? 0 0 0 1 100 ? 102 A 1
+ATOM 409 N N . GLY A 1 103 ? 0 0 0 1 100 ? 103 A 1
+ATOM 410 C CA . GLY A 1 103 ? 0 0 0 1 100 ? 103 A 1
+ATOM 411 C C . GLY A 1 103 ? 0 0 0 1 100 ? 103 A 1
+ATOM 412 O O . GLY A 1 103 ? 0 0 0 1 100 ? 103 A 1
+ATOM 413 N N . GLY A 1 104 ? 0 0 0 1 100 ? 104 A 1
+ATOM 414 C CA . GLY A 1 104 ? 0 0 0 1 100 ? 104 A 1
+ATOM 415 C C . GLY A 1 104 ? 0 0 0 1 100 ? 104 A 1
+ATOM 416 O O . GLY A 1 104 ? 0 0 0 1 100 ? 104 A 1
+ATOM 417 N N . GLY A 1 105 ? 0 0 0 1 100 ? 105 A 1
+ATOM 418 C CA . GLY A 1 105 ? 0 0 0 1 100 ? 105 A 1
+ATOM 419 C C . GLY A 1 105 ? 0 0 0 1 100 ? 105 A 1
+ATOM 420 O O . GLY A 1 105 ? 0 0 0 1 100 ? 105 A 1
+ATOM 421 N N . GLY A 1 106 ? 0 0 0 1 100 ? 106 A 1
+ATOM 422 C CA . GLY A 1 106 ? 0 0 0 1 100 ? 106 A 1
+ATOM 423 C C . GLY A 1 106 ? 0 0 0 1 100 ? 106 A 1
+ATOM 424 O O . GLY A 1 106 ? 0 0 0 1 100 ? 106 A 1
+ATOM 425 N N . GLY A 1 107 ? 0 0 0 1 100 ? 107 A 1
+ATOM 426 C CA . GLY A 1 107 ? 0 0 0 1 100 ? 107 A 1
+ATOM 427 C C . GLY A 1 107 ? 0 0 0 1 100 ? 107 A 1
+ATOM 428 O O . GLY A 1 107 ? 0 0 0 1 100 ? 107 A 1
+ATOM 429 N N . GLY A 1 108 ? 0 0 0 1 100 ? 108 A 1
+ATOM 430 C CA . GLY A 1 108 ? 0 0 0 1 100 ? 108 A 1
+ATOM 431 C C . GLY A 1 108 ? 0 0 0 1 100 ? 108 A 1
+ATOM 432 O O . GLY A 1 108 ? 0 0 0 1 100 ? 108 A 1
+ATOM 433 N N . GLY A 1 109 ? 0 0 0 1 100 ? 109 A 1
+ATOM 434 C CA . GLY A 1 109 ? 0 0 0 1 100 ? 109 A 1
+ATOM 435 C C . GLY A 1 109 ? 0 0 0 1 100 ? 109 A 1
+ATOM 436 O O . GLY A 1 109 ? 0 0 0 1 100 ? 109 A 1
+ATOM 437 N N . GLY A 1 110 ? 0 0 0 1 100 ? 110 A 1
+ATOM 438 C CA . GLY A 1 110 ? 0 0 0 1 100 ? 110 A 1
+ATOM 439 C C . GLY A 1 110 ? 0 0 0 1 100 ? 110 A 1
+ATOM 440 O O . GLY A 1 110 ? 0 0 0 1 100 ? 110 A 1
+ATOM 441 N N . GLY A 1 111 ? 0 0 0 1 100 ? 111 A 1
+ATOM 442 C CA . GLY A 1 111 ? 0 0 0 1 100 ? 111 A 1
+ATOM 443 C C . GLY A 1 111 ? 0 0 0 1 100 ? 111 A 1
+ATOM 444 O O . GLY A 1 111 ? 0 0 0 1 100 ? 111 A 1
+ATOM 445 N N . GLY A 1 112 ? 0 0 0 1 100 ? 112 A 1
+ATOM 446 C CA . GLY A 1 112 ? 0 0 0 1 100 ? 112 A 1
+ATOM 447 C C . GLY A 1 112 ? 0 0 0 1 100 ? 112 A 1
+ATOM 448 O O . GLY A 1 112 ? 0 0 0 1 100 ? 112 A 1
+ATOM 449 N N . GLY A 1 113 ? 0 0 0 1 100 ? 113 A 1
+ATOM 450 C CA . GLY A 1 113 ? 0 0 0 1 100 ? 113 A 1
+ATOM 451 C C . GLY A 1 113 ? 0 0 0 1 100 ? 113 A 1
+ATOM 452 O O . GLY A 1 113 ? 0 0 0 1 100 ? 113 A 1
+ATOM 453 N N . GLY A 1 114 ? 0 0 0 1 100 ? 114 A 1
+ATOM 454 C CA . GLY A 1 114 ? 0 0 0 1 100 ? 114 A 1
+ATOM 455 C C . GLY A 1 114 ? 0 0 0 1 100 ? 114 A 1
+ATOM 456 O O . GLY A 1 114 ? 0 0 0 1 100 ? 114 A 1
+ATOM 457 N N . GLY A 1 115 ? 0 0 0 1 100 ? 115 A 1
+ATOM 458 C CA . GLY A 1 115 ? 0 0 0 1 100 ? 115 A 1
+ATOM 459 C C . GLY A 1 115 ? 0 0 0 1 100 ? 115 A 1
+ATOM 460 O O . GLY A 1 115 ? 0 0 0 1 100 ? 115 A 1
+ATOM 461 N N . GLY A 1 116 ? 0 0 0 1 100 ? 116 A 1
+ATOM 462 C CA . GLY A 1 116 ? 0 0 0 1 100 ? 116 A 1
+ATOM 463 C C . GLY A 1 116 ? 0 0 0 1 100 ? 116 A 1
+ATOM 464 O O . GLY A 1 116 ? 0 0 0 1 100 ? 116 A 1
+ATOM 465 N N . GLY A 1 117 ? 0 0 0 1 100 ? 117 A 1
+ATOM 466 C CA . GLY A 1 117 ? 0 0 0 1 100 ? 117 A 1
+ATOM 467 C C . GLY A 1 117 ? 0 0 0 1 100 ? 117 A 1
+ATOM 468 O O . GLY A 1 117 ? 0 0 0 1 100 ? 117 A 1
+ATOM 469 N N . GLY A 1 118 ? 0 0 0 1 100 ? 118 A 1
+ATOM 470 C CA . GLY A 1 118 ? 0 0 0 1 100 ? 118 A 1
+ATOM 471 C C . GLY A 1 118 ? 0 0 0 1 100 ? 118 A 1
+ATOM 472 O O . GLY A 1 118 ? 0 0 0 1 100 ? 118 A 1
+ATOM 473 N N . GLY A 1 119 ? 0 0 0 1 100 ? 119 A 1
+ATOM 474 C CA . GLY A 1 119 ? 0 0 0 1 100 ? 119 A 1
+ATOM 475 C C . GLY A 1 119 ? 0 0 0 1 100 ? 119 A 1
+ATOM 476 O O . GLY A 1 119 ? 0 0 0 1 100 ? 119 A 1
+ATOM 477 N N . GLY A 1 120 ? 0 0 0 1 100 ? 120 A 1
+ATOM 478 C CA . GLY A 1 120 ? 0 0 0 1 100 ? 120 A 1
+ATOM 479 C C . GLY A 1 120 ? 0 0 0 1 100 ? 120 A 1
+ATOM 480 O O . GLY A 1 120 ? 0 0 0 1 100 ? 120 A 1
+ATOM 481 N N . GLY A 1 121 ? 0 0 0 1 100 ? 121 A 1
+ATOM 482 C CA . GLY A 1 121 ? 0 0 0 1 100 ? 121 A 1
+ATOM 483 C C . GLY A 1 121 ? 0 0 0 1 100 ? 121 A 1
+ATOM 484 O O . GLY A 1 121 ? 0 0 0 1 100 ? 121 A 1
+ATOM 485 N N . GLY A 1 122 ? 0 0 0 1 100 ? 122 A 1
+ATOM 486 C CA . GLY A 1 122 ? 0 0 0 1 100 ? 122 A 1
+ATOM 487 C C . GLY A 1 122 ? 0 0 0 1 100 ? 122 A 1
+ATOM 488 O O . GLY A 1 122 ? 0 0 0 1 100 ? 122 A 1
+ATOM 489 N N . GLY A 1 123 ? 0 0 0 1 100 ? 123 A 1
+ATOM 490 C CA . GLY A 1 123 ? 0 0 0 1 100 ? 123 A 1
+ATOM 491 C C . GLY A 1 123 ? 0 0 0 1 100 ? 123 A 1
+ATOM 492 O O . GLY A 1 123 ? 0 0 0 1 100 ? 123 A 1
+ATOM 493 N N . GLY A 1 124 ? 0 0 0 1 100 ? 124 A 1
+ATOM 494 C CA . GLY A 1 124 ? 0 0 0 1 100 ? 124 A 1
+ATOM 495 C C . GLY A 1 124 ? 0 0 0 1 100 ? 124 A 1
+ATOM 496 O O . GLY A 1 124 ? 0 0 0 1 100 ? 124 A 1
+ATOM 497 N N . GLY A 1 125 ? 0 0 0 1 100 ? 125 A 1
+ATOM 498 C CA . GLY A 1 125 ? 0 0 0 1 100 ? 125 A 1
+ATOM 499 C C . GLY A 1 125 ? 0 0 0 1 100 ? 125 A 1
+ATOM 500 O O . GLY A 1 125 ? 0 0 0 1 100 ? 125 A 1
+ATOM 501 N N . GLY A 1 126 ? 0 0 0 1 100 ? 126 A 1
+ATOM 502 C CA . GLY A 1 126 ? 0 0 0 1 100 ? 126 A 1
+ATOM 503 C C . GLY A 1 126 ? 0 0 0 1 100 ? 126 A 1
+ATOM 504 O O . GLY A 1 126 ? 0 0 0 1 100 ? 126 A 1
+ATOM 505 N N . GLY A 1 127 ? 0 0 0 1 100 ? 127 A 1
+ATOM 506 C CA . GLY A 1 127 ? 0 0 0 1 100 ? 127 A 1
+ATOM 507 C C . GLY A 1 127 ? 0 0 0 1 100 ? 127 A 1
+ATOM 508 O O . GLY A 1 127 ? 0 0 0 1 100 ? 127 A 1
+ATOM 509 N N . GLY A 1 128 ? 0 0 0 1 100 ? 128 A 1
+ATOM 510 C CA . GLY A 1 128 ? 0 0 0 1 100 ? 128 A 1
+ATOM 511 C C . GLY A 1 128 ? 0 0 0 1 100 ? 128 A 1
+ATOM 512 O O . GLY A 1 128 ? 0 0 0 1 100 ? 128 A 1
+ATOM 513 N N . GLY A 1 129 ? 0 0 0 1 100 ? 129 A 1
+ATOM 514 C CA . GLY A 1 129 ? 0 0 0 1 100 ? 129 A 1
+ATOM 515 C C . GLY A 1 129 ? 0 0 0 1 100 ? 129 A 1
+ATOM 516 O O . GLY A 1 129 ? 0 0 0 1 100 ? 129 A 1
+ATOM 517 N N . GLY A 1 130 ? 0 0 0 1 100 ? 130 A 1
+ATOM 518 C CA . GLY A 1 130 ? 0 0 0 1 100 ? 130 A 1
+ATOM 519 C C . GLY A 1 130 ? 0 0 0 1 100 ? 130 A 1
+ATOM 520 O O . GLY A 1 130 ? 0 0 0 1 100 ? 130 A 1
+ATOM 521 N N . GLY A 1 131 ? 0 0 0 1 100 ? 131 A 1
+ATOM 522 C CA . GLY A 1 131 ? 0 0 0 1 100 ? 131 A 1
+ATOM 523 C C . GLY A 1 131 ? 0 0 0 1 100 ? 131 A 1
+ATOM 524 O O . GLY A 1 131 ? 0 0 0 1 100 ? 131 A 1
+ATOM 525 N N . GLY A 1 132 ? 0 0 0 1 100 ? 132 A 1
+ATOM 526 C CA . GLY A 1 132 ? 0 0 0 1 100 ? 132 A 1
+ATOM 527 C C . GLY A 1 132 ? 0 0 0 1 100 ? 132 A 1
+ATOM 528 O O . GLY A 1 132 ? 0 0 0 1 100 ? 132 A 1
+ATOM 529 N N . GLY A 1 133 ? 0 0 0 1 100 ? 133 A 1
+ATOM 530 C CA . GLY A 1 133 ? 0 0 0 1 100 ? 133 A 1
+ATOM 531 C C . GLY A 1 133 ? 0 0 0 1 100 ? 133 A 1
+ATOM 532 O O . GLY A 1 133 ? 0 0 0 1 100 ? 133 A 1
+ATOM 533 N N . GLY A 1 134 ? 0 0 0 1 100 ? 134 A 1
+ATOM 534 C CA . GLY A 1 134 ? 0 0 0 1 100 ? 134 A 1
+ATOM 535 C C . GLY A 1 134 ? 0 0 0 1 100 ? 134 A 1
+ATOM 536 O O . GLY A 1 134 ? 0 0 0 1 100 ? 134 A 1
+ATOM 537 N N . GLY A 1 135 ? 0 0 0 1 100 ? 135 A 1
+ATOM 538 C CA . GLY A 1 135 ? 0 0 0 1 100 ? 135 A 1
+ATOM 539 C C . GLY A 1 135 ? 0 0 0 1 100 ? 135 A 1
+ATOM 540 O O . GLY A 1 135 ? 0 0 0 1 100 ? 135 A 1
+ATOM 541 N N . GLY A 1 136 ? 0 0 0 1 100 ? 136 A 1
+ATOM 542 C CA . GLY A 1 136 ? 0 0 0 1 100 ? 136 A 1
+ATOM 543 C C . GLY A 1 136 ? 0 0 0 1 100 ? 136 A 1
+ATOM 544 O O . GLY A 1 136 ? 0 0 0 1 100 ? 136 A 1
+ATOM 545 N N . GLY A 1 137 ? 0 0 0 1 100 ? 137 A 1
+ATOM 546 C CA . GLY A 1 137 ? 0 0 0 1 100 ? 137 A 1
+ATOM 547 C C . GLY A 1 137 ? 0 0 0 1 100 ? 137 A 1
+ATOM 548 O O . GLY A 1 137 ? 0 0 0 1 100 ? 137 A 1
+ATOM 549 N N . GLY A 1 138 ? 0 0 0 1 100 ? 138 A 1
+ATOM 550 C CA . GLY A 1 138 ? 0 0 0 1 100 ? 138 A 1
+ATOM 551 C C . GLY A 1 138 ? 0 0 0 1 100 ? 138 A 1
+ATOM 552 O O . GLY A 1 138 ? 0 0 0 1 100 ? 138 A 1
+ATOM 553 N N . GLY A 1 139 ? 0 0 0 1 100 ? 139 A 1
+ATOM 554 C CA . GLY A 1 139 ? 0 0 0 1 100 ? 139 A 1
+ATOM 555 C C . GLY A 1 139 ? 0 0 0 1 100 ? 139 A 1
+ATOM 556 O O . GLY A 1 139 ? 0 0 0 1 100 ? 139 A 1
+ATOM 557 N N . GLY A 1 140 ? 0 0 0 1 100 ? 140 A 1
+ATOM 558 C CA . GLY A 1 140 ? 0 0 0 1 100 ? 140 A 1
+ATOM 559 C C . GLY A 1 140 ? 0 0 0 1 100 ? 140 A 1
+ATOM 560 O O . GLY A 1 140 ? 0 0 0 1 100 ? 140 A 1
+ATOM 561 N N . GLY A 1 141 ? 0 0 0 1 100 ? 141 A 1
+ATOM 562 C CA . GLY A 1 141 ? 0 0 0 1 100 ? 141 A 1
+ATOM 563 C C . GLY A 1 141 ? 0 0 0 1 100 ? 141 A 1
+ATOM 564 O O . GLY A 1 141 ? 0 0 0 1 100 ? 141 A 1
+ATOM 565 N N . GLY A 1 142 ? 0 0 0 1 100 ? 142 A 1
+ATOM 566 C CA . GLY A 1 142 ? 0 0 0 1 100 ? 142 A 1
+ATOM 567 C C . GLY A 1 142 ? 0 0 0 1 100 ? 142 A 1
+ATOM 568 O O . GLY A 1 142 ? 0 0 0 1 100 ? 142 A 1
+ATOM 569 N N . GLY A 1 143 ? 0 0 0 1 100 ? 143 A 1
+ATOM 570 C CA . GLY A 1 143 ? 0 0 0 1 100 ? 143 A 1
+ATOM 571 C C . GLY A 1 143 ? 0 0 0 1 100 ? 143 A 1
+ATOM 572 O O . GLY A 1 143 ? 0 0 0 1 100 ? 143 A 1
+ATOM 573 N N . GLY A 1 144 ? 0 0 0 1 100 ? 144 A 1
+ATOM 574 C CA . GLY A 1 144 ? 0 0 0 1 100 ? 144 A 1
+ATOM 575 C C . GLY A 1 144 ? 0 0 0 1 100 ? 144 A 1
+ATOM 576 O O . GLY A 1 144 ? 0 0 0 1 100 ? 144 A 1
+ATOM 577 C C1 . TSA B 2 1 ? 0 0 0 1 0 ? 1 B 1
+ATOM 578 C C2 . TSA B 2 1 ? 0 0 0 1 0 ? 1 B 1
+ATOM 579 C C3 . TSA B 2 1 ? 0 0 0 1 0 ? 1 B 1
+ATOM 580 C C4 . TSA B 2 1 ? 0 0 0 1 0 ? 1 B 1
+ATOM 581 O O5 . TSA B 2 1 ? 0 0 0 1 0 ? 1 B 1
+ATOM 582 C C5 . TSA B 2 1 ? 0 0 0 1 0 ? 1 B 1
+ATOM 583 C C6 . TSA B 2 1 ? 0 0 0 1 0 ? 1 B 1
+ATOM 584 O O7 . TSA B 2 1 ? 0 0 0 1 0 ? 1 B 1
+ATOM 585 C C8 . TSA B 2 1 ? 0 0 0 1 0 ? 1 B 1
+ATOM 586 C C9 . TSA B 2 1 ? 0 0 0 1 0 ? 1 B 1
+ATOM 587 C C10 . TSA B 2 1 ? 0 0 0 1 0 ? 1 B 1
+ATOM 588 O O1 . TSA B 2 1 ? 0 0 0 1 0 ? 1 B 1
+ATOM 589 O O2 . TSA B 2 1 ? 0 0 0 1 0 ? 1 B 1
+ATOM 590 C C11 . TSA B 2 1 ? 0 0 0 1 0 ? 1 B 1
+ATOM 591 O O3 . TSA B 2 1 ? 0 0 0 1 0 ? 1 B 1
+ATOM 592 O O4 . TSA B 2 1 ? 0 0 0 1 0 ? 1 B 1
+
+loop_
+_pdbx_poly_seq_scheme.asym_id
+_pdbx_poly_seq_scheme.entity_id
+_pdbx_poly_seq_scheme.seq_id
+_pdbx_poly_seq_scheme.mon_id
+_pdbx_poly_seq_scheme.pdb_seq_num
+_pdbx_poly_seq_scheme.auth_seq_num
+_pdbx_poly_seq_scheme.pdb_mon_id
+_pdbx_poly_seq_scheme.auth_mon_id
+_pdbx_poly_seq_scheme.pdb_strand_id
+_pdbx_poly_seq_scheme.pdb_ins_code
+_pdbx_poly_seq_scheme.hetero
+A 1 1 GLY 1 1 GLY GLY A . n
+A 1 2 GLY 2 2 GLY GLY A . n
+A 1 3 GLY 3 3 GLY GLY A . n
+A 1 4 GLY 4 4 GLY GLY A . n
+A 1 5 GLY 5 5 GLY GLY A . n
+A 1 6 GLY 6 6 GLY GLY A . n
+A 1 7 GLY 7 7 GLY GLY A . n
+A 1 8 GLY 8 8 GLY GLY A . n
+A 1 9 GLY 9 9 GLY GLY A . n
+A 1 10 GLY 10 10 GLY GLY A . n
+A 1 11 GLY 11 11 GLY GLY A . n
+A 1 12 GLY 12 12 GLY GLY A . n
+A 1 13 GLY 13 13 GLY GLY A . n
+A 1 14 GLY 14 14 GLY GLY A . n
+A 1 15 GLY 15 15 GLY GLY A . n
+A 1 16 GLY 16 16 GLY GLY A . n
+A 1 17 GLY 17 17 GLY GLY A . n
+A 1 18 GLY 18 18 GLY GLY A . n
+A 1 19 GLY 19 19 GLY GLY A . n
+A 1 20 GLY 20 20 GLY GLY A . n
+A 1 21 GLY 21 21 GLY GLY A . n
+A 1 22 GLY 22 22 GLY GLY A . n
+A 1 23 GLY 23 23 GLY GLY A . n
+A 1 24 GLY 24 24 GLY GLY A . n
+A 1 25 GLY 25 25 GLY GLY A . n
+A 1 26 GLY 26 26 GLY GLY A . n
+A 1 27 GLY 27 27 GLY GLY A . n
+A 1 28 GLY 28 28 GLY GLY A . n
+A 1 29 GLY 29 29 GLY GLY A . n
+A 1 30 GLY 30 30 GLY GLY A . n
+A 1 31 GLY 31 31 GLY GLY A . n
+A 1 32 GLY 32 32 GLY GLY A . n
+A 1 33 GLY 33 33 GLY GLY A . n
+A 1 34 GLY 34 34 GLY GLY A . n
+A 1 35 GLY 35 35 GLY GLY A . n
+A 1 36 GLY 36 36 GLY GLY A . n
+A 1 37 GLY 37 37 GLY GLY A . n
+A 1 38 GLY 38 38 GLY GLY A . n
+A 1 39 GLY 39 39 GLY GLY A . n
+A 1 40 GLY 40 40 GLY GLY A . n
+A 1 41 GLY 41 41 GLY GLY A . n
+A 1 42 GLY 42 42 GLY GLY A . n
+A 1 43 GLY 43 43 GLY GLY A . n
+A 1 44 GLY 44 44 GLY GLY A . n
+A 1 45 GLY 45 45 GLY GLY A . n
+A 1 46 GLY 46 46 GLY GLY A . n
+A 1 47 GLY 47 47 GLY GLY A . n
+A 1 48 GLY 48 48 GLY GLY A . n
+A 1 49 GLY 49 49 GLY GLY A . n
+A 1 50 GLY 50 50 GLY GLY A . n
+A 1 51 GLY 51 51 GLY GLY A . n
+A 1 52 GLY 52 52 GLY GLY A . n
+A 1 53 GLY 53 53 GLY GLY A . n
+A 1 54 GLY 54 54 GLY GLY A . n
+A 1 55 GLY 55 55 GLY GLY A . n
+A 1 56 GLY 56 56 GLY GLY A . n
+A 1 57 GLY 57 57 GLY GLY A . n
+A 1 58 GLY 58 58 GLY GLY A . n
+A 1 59 GLY 59 59 GLY GLY A . n
+A 1 60 GLY 60 60 GLY GLY A . n
+A 1 61 GLY 61 61 GLY GLY A . n
+A 1 62 GLY 62 62 GLY GLY A . n
+A 1 63 GLY 63 63 GLY GLY A . n
+A 1 64 GLY 64 64 GLY GLY A . n
+A 1 65 GLY 65 65 GLY GLY A . n
+A 1 66 GLY 66 66 GLY GLY A . n
+A 1 67 GLY 67 67 GLY GLY A . n
+A 1 68 GLY 68 68 GLY GLY A . n
+A 1 69 GLY 69 69 GLY GLY A . n
+A 1 70 GLY 70 70 GLY GLY A . n
+A 1 71 GLY 71 71 GLY GLY A . n
+A 1 72 GLY 72 72 GLY GLY A . n
+A 1 73 GLY 73 73 GLY GLY A . n
+A 1 74 GLY 74 74 GLY GLY A . n
+A 1 75 GLY 75 75 GLY GLY A . n
+A 1 76 GLY 76 76 GLY GLY A . n
+A 1 77 GLY 77 77 GLY GLY A . n
+A 1 78 GLY 78 78 GLY GLY A . n
+A 1 79 GLY 79 79 GLY GLY A . n
+A 1 80 GLY 80 80 GLY GLY A . n
+A 1 81 GLY 81 81 GLY GLY A . n
+A 1 82 GLY 82 82 GLY GLY A . n
+A 1 83 GLY 83 83 GLY GLY A . n
+A 1 84 GLY 84 84 GLY GLY A . n
+A 1 85 GLY 85 85 GLY GLY A . n
+A 1 86 GLY 86 86 GLY GLY A . n
+A 1 87 GLY 87 87 GLY GLY A . n
+A 1 88 GLY 88 88 GLY GLY A . n
+A 1 89 GLY 89 89 GLY GLY A . n
+A 1 90 GLY 90 90 GLY GLY A . n
+A 1 91 GLY 91 91 GLY GLY A . n
+A 1 92 GLY 92 92 GLY GLY A . n
+A 1 93 GLY 93 93 GLY GLY A . n
+A 1 94 GLY 94 94 GLY GLY A . n
+A 1 95 GLY 95 95 GLY GLY A . n
+A 1 96 GLY 96 96 GLY GLY A . n
+A 1 97 GLY 97 97 GLY GLY A . n
+A 1 98 GLY 98 98 GLY GLY A . n
+A 1 99 GLY 99 99 GLY GLY A . n
+A 1 100 GLY 100 100 GLY GLY A . n
+A 1 101 GLY 101 101 GLY GLY A . n
+A 1 102 GLY 102 102 GLY GLY A . n
+A 1 103 GLY 103 103 GLY GLY A . n
+A 1 104 GLY 104 104 GLY GLY A . n
+A 1 105 GLY 105 105 GLY GLY A . n
+A 1 106 GLY 106 106 GLY GLY A . n
+A 1 107 GLY 107 107 GLY GLY A . n
+A 1 108 GLY 108 108 GLY GLY A . n
+A 1 109 GLY 109 109 GLY GLY A . n
+A 1 110 GLY 110 110 GLY GLY A . n
+A 1 111 GLY 111 111 GLY GLY A . n
+A 1 112 GLY 112 112 GLY GLY A . n
+A 1 113 GLY 113 113 GLY GLY A . n
+A 1 114 GLY 114 114 GLY GLY A . n
+A 1 115 GLY 115 115 GLY GLY A . n
+A 1 116 GLY 116 116 GLY GLY A . n
+A 1 117 GLY 117 117 GLY GLY A . n
+A 1 118 GLY 118 118 GLY GLY A . n
+A 1 119 GLY 119 119 GLY GLY A . n
+A 1 120 GLY 120 120 GLY GLY A . n
+A 1 121 GLY 121 121 GLY GLY A . n
+A 1 122 GLY 122 122 GLY GLY A . n
+A 1 123 GLY 123 123 GLY GLY A . n
+A 1 124 GLY 124 124 GLY GLY A . n
+A 1 125 GLY 125 125 GLY GLY A . n
+A 1 126 GLY 126 126 GLY GLY A . n
+A 1 127 GLY 127 127 GLY GLY A . n
+A 1 128 GLY 128 128 GLY GLY A . n
+A 1 129 GLY 129 129 GLY GLY A . n
+A 1 130 GLY 130 130 GLY GLY A . n
+A 1 131 GLY 131 131 GLY GLY A . n
+A 1 132 GLY 132 132 GLY GLY A . n
+A 1 133 GLY 133 133 GLY GLY A . n
+A 1 134 GLY 134 134 GLY GLY A . n
+A 1 135 GLY 135 135 GLY GLY A . n
+A 1 136 GLY 136 136 GLY GLY A . n
+A 1 137 GLY 137 137 GLY GLY A . n
+A 1 138 GLY 138 138 GLY GLY A . n
+A 1 139 GLY 139 139 GLY GLY A . n
+A 1 140 GLY 140 140 GLY GLY A . n
+A 1 141 GLY 141 141 GLY GLY A . n
+A 1 142 GLY 142 142 GLY GLY A . n
+A 1 143 GLY 143 143 GLY GLY A . n
+A 1 144 GLY 144 144 GLY GLY A . n
+
+loop_
+_ma_qa_metric.id
+_ma_qa_metric.name
+_ma_qa_metric.description
+_ma_qa_metric.type
+_ma_qa_metric.mode
+_ma_qa_metric.type_other_details
+_ma_qa_metric.software_group_id
+1 pLDDT 'Predicted lddt' pLDDT local . .
+
+loop_
+_ma_qa_metric_local.ordinal_id
+_ma_qa_metric_local.model_id
+_ma_qa_metric_local.label_asym_id
+_ma_qa_metric_local.label_seq_id
+_ma_qa_metric_local.label_comp_id
+_ma_qa_metric_local.metric_id
+_ma_qa_metric_local.metric_value
+1 1 A 1 GLY 1 80.000
+2 1 A 2 GLY 1 80.000
+3 1 A 3 GLY 1 80.000
+4 1 A 4 GLY 1 80.000
+5 1 A 5 GLY 1 80.000
+6 1 A 6 GLY 1 80.000
+7 1 A 7 GLY 1 80.000
+8 1 A 8 GLY 1 80.000
+9 1 A 9 GLY 1 80.000
+10 1 A 10 GLY 1 80.000
+11 1 A 11 GLY 1 80.000
+12 1 A 12 GLY 1 80.000
+13 1 A 13 GLY 1 80.000
+14 1 A 14 GLY 1 80.000
+15 1 A 15 GLY 1 80.000
+16 1 A 16 GLY 1 80.000
+17 1 A 17 GLY 1 80.000
+18 1 A 18 GLY 1 80.000
+19 1 A 19 GLY 1 80.000
+20 1 A 20 GLY 1 80.000
+21 1 A 21 GLY 1 80.000
+22 1 A 22 GLY 1 80.000
+23 1 A 23 GLY 1 80.000
+24 1 A 24 GLY 1 80.000
+25 1 A 25 GLY 1 80.000
+26 1 A 26 GLY 1 80.000
+27 1 A 27 GLY 1 80.000
+28 1 A 28 GLY 1 80.000
+29 1 A 29 GLY 1 80.000
+30 1 A 30 GLY 1 80.000
+31 1 A 31 GLY 1 80.000
+32 1 A 32 GLY 1 80.000
+33 1 A 33 GLY 1 80.000
+34 1 A 34 GLY 1 80.000
+35 1 A 35 GLY 1 80.000
+36 1 A 36 GLY 1 80.000
+37 1 A 37 GLY 1 80.000
+38 1 A 38 GLY 1 80.000
+39 1 A 39 GLY 1 80.000
+40 1 A 40 GLY 1 80.000
+41 1 A 41 GLY 1 80.000
+42 1 A 42 GLY 1 80.000
+43 1 A 43 GLY 1 80.000
+44 1 A 44 GLY 1 80.000
+45 1 A 45 GLY 1 80.000
+46 1 A 46 GLY 1 80.000
+47 1 A 47 GLY 1 80.000
+48 1 A 48 GLY 1 80.000
+49 1 A 49 GLY 1 80.000
+50 1 A 50 GLY 1 80.000
+51 1 A 51 GLY 1 80.000
+52 1 A 52 GLY 1 80.000
+53 1 A 53 GLY 1 80.000
+54 1 A 54 GLY 1 80.000
+55 1 A 55 GLY 1 80.000
+56 1 A 56 GLY 1 80.000
+57 1 A 57 GLY 1 80.000
+58 1 A 58 GLY 1 80.000
+59 1 A 59 GLY 1 80.000
+60 1 A 60 GLY 1 80.000
+61 1 A 61 GLY 1 80.000
+62 1 A 62 GLY 1 80.000
+63 1 A 63 GLY 1 80.000
+64 1 A 64 GLY 1 80.000
+65 1 A 65 GLY 1 80.000
+66 1 A 66 GLY 1 80.000
+67 1 A 67 GLY 1 80.000
+68 1 A 68 GLY 1 80.000
+69 1 A 69 GLY 1 80.000
+70 1 A 70 GLY 1 80.000
+71 1 A 71 GLY 1 80.000
+72 1 A 72 GLY 1 80.000
+73 1 A 73 GLY 1 80.000
+74 1 A 74 GLY 1 80.000
+75 1 A 75 GLY 1 80.000
+76 1 A 76 GLY 1 80.000
+77 1 A 77 GLY 1 80.000
+78 1 A 78 GLY 1 80.000
+79 1 A 79 GLY 1 80.000
+80 1 A 80 GLY 1 80.000
+81 1 A 81 GLY 1 80.000
+82 1 A 82 GLY 1 80.000
+83 1 A 83 GLY 1 80.000
+84 1 A 84 GLY 1 80.000
+85 1 A 85 GLY 1 80.000
+86 1 A 86 GLY 1 80.000
+87 1 A 87 GLY 1 80.000
+88 1 A 88 GLY 1 80.000
+89 1 A 89 GLY 1 80.000
+90 1 A 90 GLY 1 80.000
+91 1 A 91 GLY 1 80.000
+92 1 A 92 GLY 1 80.000
+93 1 A 93 GLY 1 80.000
+94 1 A 94 GLY 1 80.000
+95 1 A 95 GLY 1 80.000
+96 1 A 96 GLY 1 80.000
+97 1 A 97 GLY 1 80.000
+98 1 A 98 GLY 1 80.000
+99 1 A 99 GLY 1 80.000
+100 1 A 100 GLY 1 80.000
+101 1 A 101 GLY 1 80.000
+102 1 A 102 GLY 1 80.000
+103 1 A 103 GLY 1 80.000
+104 1 A 104 GLY 1 80.000
+105 1 A 105 GLY 1 80.000
+106 1 A 106 GLY 1 80.000
+107 1 A 107 GLY 1 80.000
+108 1 A 108 GLY 1 80.000
+109 1 A 109 GLY 1 80.000
+110 1 A 110 GLY 1 80.000
+111 1 A 111 GLY 1 80.000
+112 1 A 112 GLY 1 80.000
+113 1 A 113 GLY 1 80.000
+114 1 A 114 GLY 1 80.000
+115 1 A 115 GLY 1 80.000
+116 1 A 116 GLY 1 80.000
+117 1 A 117 GLY 1 80.000
+118 1 A 118 GLY 1 80.000
+119 1 A 119 GLY 1 80.000
+120 1 A 120 GLY 1 80.000
+121 1 A 121 GLY 1 80.000
+122 1 A 122 GLY 1 80.000
+123 1 A 123 GLY 1 80.000
+124 1 A 124 GLY 1 80.000
+125 1 A 125 GLY 1 80.000
+126 1 A 126 GLY 1 80.000
+127 1 A 127 GLY 1 80.000
+128 1 A 128 GLY 1 80.000
+129 1 A 129 GLY 1 80.000
+130 1 A 130 GLY 1 80.000
+131 1 A 131 GLY 1 80.000
+132 1 A 132 GLY 1 80.000
+133 1 A 133 GLY 1 80.000
+134 1 A 134 GLY 1 80.000
+135 1 A 135 GLY 1 80.000
+136 1 A 136 GLY 1 80.000
+137 1 A 137 GLY 1 80.000
+138 1 A 138 GLY 1 80.000
+139 1 A 139 GLY 1 80.000
+140 1 A 140 GLY 1 80.000
+141 1 A 141 GLY 1 80.000
+142 1 A 142 GLY 1 80.000
+143 1 A 143 GLY 1 80.000
+144 1 A 144 GLY 1 80.000
+145 1 B 1 TSA 1 80.000
+(boltzgen) [yli03@login05 scratch]$ vi cam1.cif
+
+105 1 A 105 GLY 1 80.000
+106 1 A 106 GLY 1 80.000
+107 1 A 107 GLY 1 80.000
+108 1 A 108 GLY 1 80.000
+109 1 A 109 GLY 1 80.000
+110 1 A 110 GLY 1 80.000
+111 1 A 111 GLY 1 80.000
+112 1 A 112 GLY 1 80.000
+113 1 A 113 GLY 1 80.000
+114 1 A 114 GLY 1 80.000
+115 1 A 115 GLY 1 80.000
+116 1 A 116 GLY 1 80.000
+117 1 A 117 GLY 1 80.000
+118 1 A 118 GLY 1 80.000
+119 1 A 119 GLY 1 80.000
+120 1 A 120 GLY 1 80.000
+121 1 A 121 GLY 1 80.000
+122 1 A 122 GLY 1 80.000
+123 1 A 123 GLY 1 80.000
+124 1 A 124 GLY 1 80.000
+125 1 A 125 GLY 1 80.000
+126 1 A 126 GLY 1 80.000
+127 1 A 127 GLY 1 80.000
+128 1 A 128 GLY 1 80.000
+129 1 A 129 GLY 1 80.000
+130 1 A 130 GLY 1 80.000
+131 1 A 131 GLY 1 80.000
+132 1 A 132 GLY 1 80.000
+133 1 A 133 GLY 1 80.000
+134 1 A 134 GLY 1 80.000
+135 1 A 135 GLY 1 80.000
+136 1 A 136 GLY 1 80.000
+137 1 A 137 GLY 1 80.000
+138 1 A 138 GLY 1 80.000
+139 1 A 139 GLY 1 80.000
+140 1 A 140 GLY 1 80.000
+141 1 A 141 GLY 1 80.000
+142 1 A 142 GLY 1 80.000
+143 1 A 143 GLY 1 80.000
+144 1 A 144 GLY 1 80.000
+145 1 B 1 TSA 1 80.000
+                                                                                                                                                         1126,1        Bot
+
