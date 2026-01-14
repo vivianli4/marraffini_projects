@@ -3,8 +3,8 @@ import subprocess
 import pandas as pd
 from pathlib import Path
 
-QUERIES_DIR = "queries"
-DB = "afdb-swissprot"
+QUERIES_DIR = "final_100_designs_cam1"
+DB = "af_swissprot"
 OUT = "cam1_foldseek"
 TMP = "tmp"
 THREADS = 16
