@@ -3,9 +3,9 @@ import subprocess
 import pandas as pd
 from pathlib import Path
 
-QUERIES_DIR = "final_100_designs_cam1"
-DB = "af_swissprot"
-OUT = "cam1_foldseek"
+QUERIES_DIR = "final_100_designs_ca4_binders"
+DB = "bfvd"
+OUT = "ca4_foldseek_viral"
 TMP = "tmp"
 THREADS = 16
 
@@ -45,14 +45,11 @@ def postprocess(df):
 
     # Example filters
     df = df[
-        (df["evalue"] < 1e-5) &
+        (df["evalue"] < 1e-4) &
         (df["qcov"] > 0.5)
     ]
 
-    return df.sort_values(
-        ["query", "bits"],
-        ascending=[True, False]
-    )
+    return df.sort_values(["query", "evalue"], ascending = [True, True])
 
 
 if __name__ == "__main__":
@@ -60,5 +57,5 @@ if __name__ == "__main__":
     df = load_results()
     df = postprocess(df)
 
-    df.to_csv("filtered_results.csv", index=False)
-    print(df.head())
+    df.to_csv("filtered_results_ca4.csv", index=False)
+    
